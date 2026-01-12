@@ -1,0 +1,149 @@
+﻿using System.Collections.Generic;
+using Tizen.NUI;
+using Tizen.NUI.BaseComponents;
+using Vix;
+using static TizenDotNet1.shared.Dtos.BuilderDto;
+
+namespace TizenDotNet1.shared.Utils;
+
+public static class UiHeroCarouselBuilder
+{
+    private static View _contentView; //view que se mueve horizontalmente
+    private static View _indicatorContainer; //contenedor visual de los puntos
+    public static View CarouselRoot { get; private set; }
+
+    public static View BuildHeroCarousel(UiModule module)
+    {
+        // view visible (viewport)
+        var carousel = new View
+        {
+            SizeHeight = 500,  
+            Layout = null, 
+            Size = new Size(1920, 500), //tamaño
+            ClippingMode = ClippingModeType.ClipChildren, //oculta lo que se sale (clave para efecto carrusel)
+            Focusable = true //necesitamos para hacer el foco en las diferentes ubicaciones del carrusel
+        };
+
+        CarouselRoot = carousel; // GUARDAMOS REFERENCIA
+
+        //view que se mueve
+        _contentView = new View
+        {
+            Layout = new LinearLayout
+            {
+                LinearOrientation = LinearLayout.Orientation.Horizontal, //que orientacion tiene el carrusel
+                CellPadding = new Size2D(40, 60) //espacio entre cards del carrusel,
+            }
+        };
+
+        carousel.Add(_contentView);
+
+        int index = 0;
+        //aca creo las cards del carrusel
+        foreach (var item in module.Contents.Edges)
+        {
+            // demo
+            var card = CreateHeroCard(
+                item.Node.HeroImageUrl, //imagen
+                item.Node.HeroTitle //titulo
+            );
+
+            int capturedIndex = index;
+
+            _contentView.Add(card);
+            index++;
+        }
+
+        //Se crean tantos puntos como imagenes.
+        carousel.Add(CreateIndicators(module.Contents.Edges.Count));
+
+        return carousel;
+    }
+
+    // crear Card individual
+    private static View CreateHeroCard(string imageUrl, string title)
+    {
+        var card = new View
+        {
+            Size = new Size(800, 450),
+            Focusable = true
+        };
+
+        var background = new ImageView //imagen
+        {
+            ResourceUrl = imageUrl,
+            Size = new Size(800, 450),
+            FittingMode = FittingModeType.ScaleToFill,
+            SamplingMode = SamplingModeType.Box
+        };
+
+        var overlay = new View
+        {
+            BackgroundColor = new Color(0, 0, 0, 0.4f) //fondo oscuro semitransparente
+        };
+
+        var titleLabel = new TextLabel //título abajo
+        {
+            Text = title,
+            TextColor = Color.White,
+            VerticalAlignment = VerticalAlignment.Bottom,
+            Padding = new Extents(20, 20, 20, 20)
+        };
+
+        card.Add(background);
+        card.Add(overlay);
+        card.Add(titleLabel);
+
+        return card;
+    }
+
+    ///dots
+    private static View CreateIndicators(int count)
+    {
+        _indicatorContainer = new View //Los centra abajo del carrusel.
+        {
+            Size = new Size(1920, 40),
+            Position = new Position(0, 460),
+            Layout = new LinearLayout
+            {
+                LinearOrientation = LinearLayout.Orientation.Horizontal,
+                HorizontalAlignment = HorizontalAlignment.Center,
+                CellPadding = new Size2D(14, 0)
+            }
+        };
+
+        for (int i = 0; i < count; i++)
+        {
+            var dot = new View //círculo perfecto y solo el primero activo
+            {
+                Name = i.ToString(),
+                Size = new Size(10, 10),
+                CornerRadius = 5,
+                BackgroundColor = i == 0 ? Color.White : new Color(1, 1, 1, 0.4f)
+            };
+
+            _indicatorContainer.Add(dot);
+        }
+
+        return _indicatorContainer;
+    }
+
+    //agregar o quitar main hero cuando voy a un thumbnail
+    public static void HideMainHero()
+    {
+        if (CarouselRoot == null) return;
+
+        CarouselRoot.Opacity = 0f;
+        CarouselRoot.Sensitive = false; // no recibe input
+
+        CarouselRoot.Dispose();
+    }
+
+    public static void ShowMainHero()
+    {
+        if (CarouselRoot == null) return;
+
+        CarouselRoot.Opacity = 1f;
+        CarouselRoot.Sensitive = true;
+    }
+}
