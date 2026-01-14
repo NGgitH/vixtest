@@ -1,15 +1,15 @@
 ﻿using Tizen.NUI.BaseComponents;
-using static TizenDotNet1.shared.Dtos.BuilderDto;
+using TizenDotNet1.shared.Dtos;
 
 namespace TizenDotNet1.shared.Utils;
 public static class UiModuleBuilder
 {
-    public static View Build(UiModule module)
+    public static View Build(Node node, string moduleType, string name = "")
     {
-        return module.ModuleType switch
+        return moduleType switch
         {
-            "HERO_CAROUSEL" => UiHeroCarouselBuilder.BuildHeroCarousel(module),
-            "VIDEO_CAROUSEL" => UiVideoCarouselBuilder.BuildVideoCarousel(module),
+            "HERO_CAROUSEL" => UiHeroCarouselBuilder.BuildHeroCarousel(node),
+            "VIDEO_CAROUSEL" => UiVideoCarouselBuilder.BuildVideoCarousel(node, name),
             _ => new View()
         };
     }

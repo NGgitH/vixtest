@@ -1,8 +1,7 @@
-﻿using System.Linq;
-using Tizen.NUI;
+﻿using Tizen.NUI;
 using Tizen.NUI.BaseComponents;
-using Vix;
-using static TizenDotNet1.shared.Dtos.BuilderDto;
+using Tizen.Pims.Contacts.ContactsViews;
+using TizenDotNet1.shared.Dtos;
 using Color = Tizen.NUI.Color;
 using NUISize = Tizen.NUI.Size;
 
@@ -15,7 +14,7 @@ public static class UiVideoCarouselBuilder
     private static View _root;
     private static View currentHero;
 
-    public static View BuildVideoCarousel(UiModule module)
+    public static View BuildVideoCarousel(Node node, string name)
     {
         var root = new View
         {
@@ -24,13 +23,13 @@ public static class UiVideoCarouselBuilder
             {
                 LinearOrientation = LinearLayout.Orientation.Vertical,
                 CellPadding = new Size2D(0, 20)
-            },
-            Name = module.Title
+            }, 
+            Name = name
         };
         // 🏷 TÍTULO
         root.Add(new TextLabel
         {
-            Text = module.Title ?? "Recomendado para ti",
+            Text = node.trackingMetadataJson.ui_module_title ?? "Recomendado para ti",
             TextColor = Color.White,
             PointSize = 30,
             Padding = new Extents(0, 0, 0, 0)
@@ -58,12 +57,13 @@ public static class UiVideoCarouselBuilder
         int index = 0;
 
         //aca creo las thumnails del carrusel
-        foreach (var item in module.Contents.Edges)
+        foreach (var item in node.contents.edges)
         {
             // demo
             var card = CreateThumbnail(
-                item.Node.HeroImageUrl, //imagen
-                item.Node.HeroTitle //titulo
+                item.node.image.link, //imagen
+                node.trackingMetadataJson.ui_module_title, //titulo
+                name
             );
 
             int capturedIndex = index;
@@ -82,14 +82,15 @@ public static class UiVideoCarouselBuilder
         return root;
     }
 
-    private static View CreateThumbnail(string imageUrl, string title)
+    private static View CreateThumbnail(string imageUrl, string title, string name)
     {
         var thumb = new View
         {
             Size = new NUISize(260, 140),
             Focusable = true,
             CornerRadius = 8,
-            BackgroundColor = Color.Black
+            BackgroundColor = Color.Black,
+            Name = name
         };
 
         var image = new ImageView
@@ -101,52 +102,5 @@ public static class UiVideoCarouselBuilder
 
         thumb.Add(image);
         return thumb;
-    }
-
-    private static void HideDetailHero()
-    {
-        if (_detailHero == null)
-            return;
-
-        _root.Remove(_detailHero);
-        _detailHero.Dispose();
-        _detailHero = null;
-    }
-
-    //logica para mostrar arriba del hero main el hero detail
-    private static void ShowDetailHero(UiModule module, int index)
-    {
-        var current = Program.sectionContainer.GetChildAt(0);
-        var children = Program.sectionContainer.Children.ToList();
-
-        foreach (var child in children)
-        {
-            Program.sectionContainer.Remove(child);
-        }
-
-        var casda = Program.sectionContainer.Children.Count;
-        Program.sectionContainer.Add(Program.detailHero);
-        Program.sectionContainer.Add(Program.thumbnails);
-
-        var item = module.Contents.Edges[index].Node;
-        UiDetailHeroBuilder.Update(
-            item.HeroImageUrl,
-            item.HeroTitle,
-            "Descripción demo"
-        );
-
-        FocusManager.Instance.SetCurrentFocusView(Program.sectionContainer.Children[0]);
-    }
-
-    public static void RestoreHeroCarousel()
-    {
-        var current = Program.sectionContainer.GetChildAt(0);
-
-        Program.sectionContainer.Remove(currentHero);
-
-        Program.sectionContainer.Add(Program.heroCarousel);
-        Program.sectionContainer.Add(Program.thumbnails);
-
-        FocusManager.Instance.SetCurrentFocusView(Program.heroCarousel.Children[0]);
     }
 }

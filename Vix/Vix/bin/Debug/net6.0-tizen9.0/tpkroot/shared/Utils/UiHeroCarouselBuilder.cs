@@ -1,8 +1,9 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using Tizen.NUI;
 using Tizen.NUI.BaseComponents;
+using TizenDotNet1.shared.Dtos;
 using Vix;
-using static TizenDotNet1.shared.Dtos.BuilderDto;
 
 namespace TizenDotNet1.shared.Utils;
 
@@ -12,7 +13,7 @@ public static class UiHeroCarouselBuilder
     private static View _indicatorContainer; //contenedor visual de los puntos
     public static View CarouselRoot { get; private set; }
 
-    public static View BuildHeroCarousel(UiModule module)
+    public static View BuildHeroCarousel(Node node)
     {
         // view visible (viewport)
         var carousel = new View
@@ -39,13 +40,14 @@ public static class UiHeroCarouselBuilder
         carousel.Add(_contentView);
 
         int index = 0;
+
         //aca creo las cards del carrusel
-        foreach (var item in module.Contents.Edges)
+        foreach (var item in node.contents.edges)
         {
             // demo
             var card = CreateHeroCard(
-                item.Node.HeroImageUrl, //imagen
-                item.Node.HeroTitle //titulo
+                item.node.landscapeFillImage.link, //imagen
+                item.node.clickTrackingJson.ui_content_title //titulo
             );
 
             int capturedIndex = index;
@@ -55,7 +57,7 @@ public static class UiHeroCarouselBuilder
         }
 
         //Se crean tantos puntos como imagenes.
-        carousel.Add(CreateIndicators(module.Contents.Edges.Count));
+        carousel.Add(CreateIndicators(node.contents.edges.Count));
 
         return carousel;
     }

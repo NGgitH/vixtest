@@ -1,15 +1,14 @@
-﻿using System.Collections.Generic;
-using Tizen.NUI;
+﻿using Tizen.NUI;
 using Tizen.NUI.BaseComponents;
 using Tizen.NUI.Components;
-using static TizenDotNet1.shared.Dtos.BuilderDto;
+using TizenDotNet1.shared.Dtos;
 
 namespace TizenDotNet1.shared.Utils;
 public static class UiDetailBuilder
 {
     private static View detailView;
 
-    public static void OpenDetailScreen(int movieIndex, UiModule module)
+    public static void OpenDetailScreen(int movieIndex, UiModules module)
     {
         detailView = new View
         {

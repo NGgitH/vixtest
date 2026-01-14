@@ -12,15 +12,15 @@
     </Reference>
     <Reference URI="shared%2FUtils%2FUiVideoCarouselBuilder.cs">
       <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512" />
-      <DigestValue>WMD5jbhwriIeNb5ymylOexNC/IE7+3HSNMsBmUIC7IiU7rivFTclg7lxUHUFBOKyRHDt5HD1LXsy3a561AbuoQ==</DigestValue>
+      <DigestValue>SsapEAjgDOOUMGueF7Nu9O3YqVeZxGIyMTioqTaztJPHIkCOUzfb5fguqwE1E0CAqiiyRebUSEmeXTEPoB5Tqg==</DigestValue>
     </Reference>
     <Reference URI="shared%2FUtils%2FUiModuleBuilder.cs">
       <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512" />
-      <DigestValue>ArehTj4PJRcB5oa/8LrMCH/vruhsbDfKpcpJ1fSKz5bmUItI9A8jHgmV5tbNAtxTGKnRU2QC8Pcq/AsZvtW2Bw==</DigestValue>
+      <DigestValue>yhHI/eZxRwGp0P1Dt1ZdS23++gliZWVoT/CydE6Rlxp3f2DWcRqmO1lHfDNrU3BXM21+0FTZOp5xFJADei2PyA==</DigestValue>
     </Reference>
     <Reference URI="shared%2FUtils%2FUiHeroCarouselBuilder.cs">
       <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512" />
-      <DigestValue>37ICE4Wp+R0GNKIXG3v/KGGMrnwAWg8O5zxz3O9wRXksl2XOrSmDjyYTgAmOj8nWDUoV/QLR1NOBn1tq5gWgbw==</DigestValue>
+      <DigestValue>RzwX1dDH2TnwRP4Yg11hPPjWudrhgQRqk6TmbIRrqwN+PrzF2/V74vyjz7MXUWxDrUM4MLBTN6b4v5a9Fs3ZYA==</DigestValue>
     </Reference>
     <Reference URI="shared%2FUtils%2FUiDetailHeroBuilder.cs">
       <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512" />
@@ -28,7 +28,7 @@
     </Reference>
     <Reference URI="shared%2FUtils%2FUiDetailBuilder.cs">
       <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512" />
-      <DigestValue>VRGZ2YpT42+azI2CnSdA31RDnjwL3pCrVFuuMKoI+QmFd6w8iQuicDhY/CUvz+9X3y5ix/Es5HXEY86hiypiIQ==</DigestValue>
+      <DigestValue>zzAsrHN/8a6CQE6IxR0rA60OtVc05+scOeQzAbUxG0TTa3O08uT+RRI33xENXPSzyCivIths8iQ1O1jiB8u9nQ==</DigestValue>
     </Reference>
     <Reference URI="shared%2Fres%2FVix.png">
       <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512" />
@@ -36,7 +36,7 @@
     </Reference>
     <Reference URI="shared%2FDtos%2FBuilderDto.cs">
       <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512" />
-      <DigestValue>n3lcPJi+aifHxUBbgm08MwOCR5S4iOyu7CmCRel5qiRpuOijvDxkRPEl7kVxZy3S27PIPckCrdoVxAmktJ0ieg==</DigestValue>
+      <DigestValue>bkSJsEAed7ZLHHs8pWSgj8v9msLRMYJFD9/KbbKAX8r0S9ltlQls0IcxXjK+pAYV7GfR+pqbNrPN5Hd4ENbwng==</DigestValue>
     </Reference>
     <Reference URI="res%2Fimages%2Ficons_movie.svg">
       <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512" />
@@ -56,11 +56,11 @@
     </Reference>
     <Reference URI="bin%2FVix.pdb">
       <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512" />
-      <DigestValue>DQjVgoAELpHXwxnJlDaKZixMnfDKPNDQ81sYQNMNKSe/sFy+Ah0KitD3H473+c+2IeOwOXUmCj8TgT2uJz0ntg==</DigestValue>
+      <DigestValue>u2Oq8xbQFrzMU3RGScDau/+JyoZArbV0xtQBPL98OWN3gKZ4rILIFSCRpTOXgRadwxfTlPmt3R7x2ev0na2c3A==</DigestValue>
     </Reference>
     <Reference URI="bin%2FVix.dll">
       <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512" />
-      <DigestValue>x4u2W46SaCAEE9/6wU3oWUeQjsUvYoYHgV3uo0DY07X0YykbbSUi4xNgbbhpE5tMbTCh1s66o7w04tMscymN4A==</DigestValue>
+      <DigestValue>E0/fUB8KYC2MJE+bpjmkwiQnQ19zGG3BkklNnvNm9lCyGQtW6F0CWFkoAUL1j3QJYVmQwZaikka8gH93mJNvyA==</DigestValue>
     </Reference>
     <Reference URI="bin%2FSystem.Reactive.dll">
       <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512" />
@@ -107,11 +107,11 @@
     </Reference>
   </SignedInfo>
   <SignatureValue>
-BteDUlDaeoX5tR34yoKMU8hWOPrBVi4MRK57p3ODd/wCcVIqwBj43MJFTHXKYdSc1W5lM9BXZ6C2
-toDX8UYhajG+makxh+mIubegQV+91jfynkLUGbovmdbkld43IIyPNTYZwV7cTXG1KLrsZGOjEfRC
-cUq+3JgGGIYNlTvszfdt+6eSf4YiNWBd1jRGh11nXoM6VjfYNWUaNmE6CxIsvX2wwdl4cokRbzLQ
-lBlw//4X/J3GZgKv39Yhgu2plvlkTroI82jadrbmEsvEOCm+lCNY1k6fhaI1S4wfitIqGGaEwaCQ
-/uCTP+H55BcxMhIvnV1jeVYecgNKipQs6ishug==
+ZD2pjOgKEswgcjh0GDAntQCbm3wqxdDbDJtK+azjU8r0rpy/q7G9YqY2qFbl24q5rHCGmd0kFvWZ
+aqnfcOclfHnc2dHUxsk+1sMKAY3Yp2YAynpd7lLCLw37KqdLsr5O+7t17uk8S8Fz8LRMi0IU+p7z
+Lb5kgW9RHdxY/rAZSoK01gG7shoR3GIyue4l70jRBa0sRu61ZROpASL7Uja5zt8l/N0sGut0Ch7w
+e08dTcErcf52tRY01VLdJLFbV9609vFNpvzwtbMqEhCEhbdpexAg9xFKfNcRiBnd6ptusKUYpjf+
+gTF1yQgvs93WIz8kP0Ws/vzUYm/sFzB1uHIPKg==
 </SignatureValue>
   <KeyInfo>
     <X509Data>

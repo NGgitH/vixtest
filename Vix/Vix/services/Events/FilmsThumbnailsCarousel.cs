@@ -10,20 +10,95 @@ public static class FilmsThumbnailsCarousel
 
     public static void Events()
     {
-        Program.thumbnails.FocusGained += (s, e) =>
+        var thumbnailIndex = 0;
+        foreach (var item in Program._carouselRoots)
         {
-            var thumbnailSelected = Program._carouselRoots[0].Children[1];
-            _contentView = thumbnailSelected.Children[0];
-            FocusManager.Instance.SetCurrentFocusView(_contentView.Children[_currentIndex]);
-        };
-        Program.thumbnails2.FocusGained += (s, e) =>
-        {
-            var thumbnailSelected = Program._carouselRoots[1].Children[1];
-            _contentView = thumbnailSelected.Children[0];
-            FocusManager.Instance.SetCurrentFocusView(_contentView.Children[_currentIndex]);
-        };
 
-        Program.thumbnails.KeyEvent += (s, e) =>
+            item.FocusGained += (s, e) =>
+            {
+                var thumbnailSelected = item.Children[1];
+                _contentView = thumbnailSelected.Children[0];
+                FocusManager.Instance.SetCurrentFocusView(_contentView.Children[_currentIndex]);
+                MoveToIndex(_currentIndex);
+            };
+
+            item.KeyEvent += (s, e) =>
+            {
+                if (e.Key.State != Key.StateType.Down)
+                    return false;
+
+                var viewportFirstThumbnail = item.Children[1];
+                _contentView = viewportFirstThumbnail.Children[0];
+
+                switch (e.Key.KeyPressedName)
+                {
+                    case "Up":
+                        var up = int.Parse(FocusManager.Instance.GetCurrentFocusView().Name) - 1;
+
+                        if (up >= 0)
+                        {
+                            var viewportPreviousThumbnail = Program._carouselRoots[up].Children[1];
+                            _contentView = viewportPreviousThumbnail.Children[0];
+                            FocusManager.Instance.SetCurrentFocusView(Program._carouselRoots[up]);
+                        }
+                        else
+                        {
+                            FocusManager.Instance.SetCurrentFocusView(Program.heroCarousel);
+                        }
+                        return true;
+
+                    case "Left":
+                        if (_currentIndex > 0)
+                        {
+                            MoveToIndex(_currentIndex - 1);
+                            FocusManager.Instance.SetCurrentFocusView(_contentView.Children[_currentIndex]);
+                        }
+                        else
+                        {
+                            Program._carouselRoots.Clear();
+                            Program._sidebar.RestoreFocus();
+                        }
+                        return true;
+
+                    case "Right":
+                        if (_contentView.Children.Count > 0)
+                        {
+                            MoveToIndex(_currentIndex + 1);
+                            FocusManager.Instance.SetCurrentFocusView(_contentView.Children[_currentIndex]);
+                        }
+                        return true;
+
+                    case "Down":
+                        var last = int.Parse(FocusManager.Instance.GetCurrentFocusView().Name) + 1;
+                        if (last < Program._carouselRoots.Count)
+                        {
+                            var viewportLastThumbnail = Program._carouselRoots[last].Children[1];
+                            _contentView = viewportLastThumbnail.Children[0];
+                            FocusManager.Instance.SetCurrentFocusView(Program._carouselRoots[last]);
+                        }
+                        return true;
+                }
+                return false;
+            };
+
+            thumbnailIndex++;
+        }
+
+        /*  
+      Program._carouselRoots[0].FocusGained += (s, e) =>
+      {
+          var thumbnailSelected = Program._carouselRoots[0].Children[1];
+          _contentView = thumbnailSelected.Children[0];
+          FocusManager.Instance.SetCurrentFocusView(_contentView.Children[_currentIndex]);
+      };
+      Program._carouselRoots[1].FocusGained += (s, e) =>
+      {
+          var thumbnailSelected = Program._carouselRoots[1].Children[1];
+          _contentView = thumbnailSelected.Children[0];
+          FocusManager.Instance.SetCurrentFocusView(_contentView.Children[_currentIndex]);
+      };*/
+        /*
+        Program._carouselRoots[0].KeyEvent += (s, e) =>
         {
             if (e.Key.State != Key.StateType.Down)
                 return false;
@@ -66,14 +141,14 @@ public static class FilmsThumbnailsCarousel
                     return true;
             }
             return false;
-        };
-
-        Program.thumbnails2.KeyEvent += (s, e) =>
+        };*/
+        /*
+        Program._carouselRoots[1].KeyEvent += (s, e) =>
         {
             if (e.Key.State != Key.StateType.Down)
                 return false;
 
-            var viewportLastThumbnail = Program.thumbnails2.Children[1];
+            var viewportLastThumbnail = Program._carouselRoots[1].Children[1];
             _contentView = viewportLastThumbnail.Children[0];
 
             switch (e.Key.KeyPressedName)
@@ -107,7 +182,7 @@ public static class FilmsThumbnailsCarousel
                     return true;
             }
             return false;
-        };
+        };*/
     }
 
     private static void MoveToIndex(int index)
