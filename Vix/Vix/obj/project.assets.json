@@ -253,11 +253,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Code\\VIX\\Vix\\Vix\\Vix.csproj",
+      "projectUniqueName": "C:\\Code\\VIX\\vixtest\\Vix\\Vix\\Vix.csproj",
       "projectName": "Vix",
-      "projectPath": "C:\\Code\\VIX\\Vix\\Vix\\Vix.csproj",
+      "projectPath": "C:\\Code\\VIX\\vixtest\\Vix\\Vix\\Vix.csproj",
       "packagesPath": "C:\\Users\\nicolas.gatti\\.nuget\\packages\\",
-      "outputPath": "C:\\Code\\VIX\\Vix\\Vix\\obj\\",
+      "outputPath": "C:\\Code\\VIX\\vixtest\\Vix\\Vix\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

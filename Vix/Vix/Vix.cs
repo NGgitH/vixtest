@@ -146,15 +146,7 @@ namespace Vix
                         thumbnailPosition++;
                      //   }
                     }
-
-                    //if (detailHero == null)
-                    //   detailHero = UiDetailHeroBuilder.Build();
-
-                    //sectionContainer.Add(heroCarousel);
-                   // sectionContainer.Add(thumbnails);
-                  ///  _carouselRoots.Add(thumbnails);
-                  //  sectionContainer.Add(thumbnails2);
-                 //   _carouselRoots.Add(thumbnails2);
+;
                     _contentArea.Add(sectionContainer);
 
                     //input del control remoto
