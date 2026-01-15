@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Tizen.NUI;
 using Tizen.NUI.BaseComponents;
 using Tizen.NUI.Components;
+using TizenDotNet1.shared.Dtos;
 
 namespace Vix.UI
 {
@@ -65,11 +66,6 @@ namespace Vix.UI
             };
             this.Add(_menuItemsContainer);
 
-            AddMenuItem("home", "Inicio", "🏠");
-            AddMenuItem("sports", "Deportes", "⚽");
-            AddMenuItem("news", "Noticias", "📰");
-            AddMenuItem("premium", "Premium", "💎");
-            AddMenuItem("account", "Cuenta", "👤");
         }
 
         private void CreateLogo()
@@ -91,6 +87,21 @@ namespace Vix.UI
                 HeightResizePolicy = ResizePolicyType.FillToParent
             });
             this.Add(logoContainer);
+        }
+
+        public void LoadMenuItems(List<NavigationItem> list)
+        {
+
+            foreach (var item in list)
+            {
+                AddMenuItem(item.Id, item.Text, "🏠");
+            }
+
+            /* AddMenuItem("home", "Inicio", "🏠");
+             AddMenuItem("sports", "Deportes", "⚽");
+             AddMenuItem("news", "Noticias", "📰");
+             AddMenuItem("premium", "Premium", "💎");
+             AddMenuItem("account", "Cuenta", "👤");*/
         }
 
         private void AddMenuItem(string id, string text, string icon)
