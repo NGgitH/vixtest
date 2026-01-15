@@ -56,11 +56,11 @@
     </Reference>
     <Reference URI="bin%2FVix.pdb">
       <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512" />
-      <DigestValue>5sIDmnaARSDF8N5gPf2F0+A2cTG7dyv6wYc2ddLqk7mPl5pITnsHZOWY9BcaYiL3WzmjgQ7YXCGjl5D4vucrAg==</DigestValue>
+      <DigestValue>HquBwqmyZia0NbPeqw+KNR/3H+7op714ROrinVinkj+GuN6VKT7ZkQLHG8SPNrmfFw4Wg6473rdvWTwV8osHHQ==</DigestValue>
     </Reference>
     <Reference URI="bin%2FVix.dll">
       <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512" />
-      <DigestValue>MMtUwOoKsuHCFuuQFkJGy+S3tEm94ft8RELjCiT/fRSfOSizlyU6SGckWDKqFSDNyLEmlBIlHH4PrMCQCq8MiQ==</DigestValue>
+      <DigestValue>4RvJSFACdMy99LIZWOfJXqvd9ZH6RVtCdYL2yICbl2n+6HfanzWLOlejntE/JaX14uahEPo/rm8U6++8XWOCvA==</DigestValue>
     </Reference>
     <Reference URI="bin%2FSystem.Reactive.dll">
       <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512" />
@@ -100,7 +100,7 @@
     </Reference>
     <Reference URI="author-signature.xml">
       <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512" />
-      <DigestValue>Wmj4SLcoB6e952OT4FKxw2s/J15bsN2jqA8uWntp2x/UqkbYs6x/mxwQjzvV0MbuIz9p6Y2QeZntm8I+ldjeGw==</DigestValue>
+      <DigestValue>m+AkI57GQ4Yt8FiH+qexV0Eypv/vtAhGbaiSYaKyC/cEshEafbYMWqXRV4mTFOTvSfZVetKxKURNtWDpBcQheQ==</DigestValue>
     </Reference>
     <Reference URI="#prop">
       <Transforms>
@@ -111,11 +111,11 @@
     </Reference>
   </SignedInfo>
   <SignatureValue>
-iLVHc9x3nCWcy6VPOVWzSHxkm2qDYeCBAlXpzuzqmZb28tg5aYl3m8YmCk+drN0FswXaAe5v4Yx6
-hVxl7RFJzIPbehHVVOD/Rxr9Tbk+GEhpygjS60AbdHmMFf6Bu8v0NFrCnbIxE3lJHkKhUmyUTull
-Ctbe8AjXwJPy9je+n//7rgp8nl+ZI+kd+3TWyhBJxiLjdj/HQd90n0Dnf2B6wGRheaeWmtOiMGQ0
-cxU71Z0UPBr/H2Bu4ECgBtG4Y21cHtGXJrcE4BkUlOZqcRWtSoEh8gD5hXXZ/AcP+qCuNMuuo0Ab
-ZPcy59qL6Hl5/yOXKXlA+L2wbM7ODk/DQxrxMg==
+mu7iOflLshAzMU86Z5zhIsyHb7mqoa8c36yyAHW/45x1eIDC2YcdCLS3xUr1WGobZ+HxqU9/lqJj
+oMp0VlH0eUebExpiu7K0DjfPg0UdHyLZgEU6dTwjjY1pzXYAo0B4wDomEnM4F7dMDwaHMq+3bcSX
+HOrwKvukD1TB74hwpg+llCaH838UCYNq3EZfefCHKTc6RpGRGLo+bgXc8QVB/Q2uKM3/iR+tCWQ5
+SkRugXf1Kxla259aShfvydNfo/jqFjmHBeMhS/IX43QieY9JJN2l+/witFMQiWpjnbCZFj/Xulue
+G7OvHlzKLvWjoXogGMUxupQSM70TOB7RxVZB6g==
 </SignatureValue>
   <KeyInfo>
     <X509Data>
