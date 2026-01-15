@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using Tizen.Multimedia.Util;
 using Tizen.NUI;
 using Tizen.NUI.BaseComponents;
 using TizenDotNet1.shared.Dtos;
@@ -52,12 +53,24 @@ public static class UiHeroCarouselBuilder
 
             int capturedIndex = index;
 
+            var viewName = new ImageView //imagen
+            {
+                ResourceUrl = item.node.landscapeFillImage.link,
+                Size = new Size(60, 60),
+                FittingMode = FittingModeType.ScaleToFill,
+                SamplingMode = SamplingModeType.Box
+            };
+            _contentView.Add(viewName);
+
             _contentView.Add(card);
             index++;
         }
 
         //Se crean tantos puntos como imagenes.
         carousel.Add(CreateIndicators(node.contents.edges.Count));
+
+
+
 
         return carousel;
     }

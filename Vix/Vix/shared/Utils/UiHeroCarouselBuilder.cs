@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using Tizen.Multimedia.Util;
 using Tizen.NUI;
 using Tizen.NUI.BaseComponents;
 using TizenDotNet1.shared.Dtos;
@@ -49,9 +50,7 @@ public static class UiHeroCarouselBuilder
                 item.node.landscapeFillImage.link, //imagen
                 item.node.clickTrackingJson.ui_content_title //titulo
             );
-
             int capturedIndex = index;
-
             _contentView.Add(card);
             index++;
         }
