@@ -15,11 +15,12 @@ public static class FilmsThumbnailsCarousel
         {
 
             item.FocusGained += (s, e) =>
-            {
+            {                
                 var thumbnailSelected = item.Children[1];
                 _contentView = thumbnailSelected.Children[0];
                 FocusManager.Instance.SetCurrentFocusView(_contentView.Children[_currentIndex]);
                 MoveToIndex(_currentIndex);
+                Program.ScrollToViewInNovelSection(item);
             };
 
             item.KeyEvent += (s, e) =>
@@ -27,23 +28,30 @@ public static class FilmsThumbnailsCarousel
                 if (e.Key.State != Key.StateType.Down)
                     return false;
 
-                var viewportFirstThumbnail = item.Children[1];
-                _contentView = viewportFirstThumbnail.Children[0];
+                var viewportCurrentThumbnail = item.Children[1];
+                _contentView = viewportCurrentThumbnail.Children[0];
+                var currentPrevious = int.Parse(FocusManager.Instance.GetCurrentFocusView().Name);
 
                 switch (e.Key.KeyPressedName)
                 {
                     case "Up":
                         var up = int.Parse(FocusManager.Instance.GetCurrentFocusView().Name) - 1;
-
                         if (up >= 0)
                         {
-                            var viewportPreviousThumbnail = Program._carouselRoots[up].Children[1];
+                            var prevCarousel = Program._carouselRoots[up];
+
+                            Program._carouselRoots[currentPrevious].Opacity = 0f;
+                            prevCarousel.Opacity = 1f;
+
+                            var viewportPreviousThumbnail = prevCarousel.Children[1];
                             _contentView = viewportPreviousThumbnail.Children[0];
-                            FocusManager.Instance.SetCurrentFocusView(Program._carouselRoots[up]);
+                            FocusManager.Instance.SetCurrentFocusView(prevCarousel);
+                            //Program.ScrollToView(prevCarousel);
                         }
                         else
                         {
                             FocusManager.Instance.SetCurrentFocusView(Program.heroCarousel);
+                            //Program.ScrollToView(Program.heroCarousel);
                         }
                         return true;
 
@@ -72,9 +80,15 @@ public static class FilmsThumbnailsCarousel
                         var last = int.Parse(FocusManager.Instance.GetCurrentFocusView().Name) + 1;
                         if (last < Program._carouselRoots.Count)
                         {
-                            var viewportLastThumbnail = Program._carouselRoots[last].Children[1];
+                            var nextCarousel = Program._carouselRoots[last];
+
+                            Program._carouselRoots[currentPrevious].Opacity = 0f;
+                            nextCarousel.Opacity = 1f;
+
+                            var viewportLastThumbnail = nextCarousel.Children[1];
                             _contentView = viewportLastThumbnail.Children[0];
-                            FocusManager.Instance.SetCurrentFocusView(Program._carouselRoots[last]);
+                            FocusManager.Instance.SetCurrentFocusView(nextCarousel);
+                            //Program.ScrollToView(nextCarousel);
                         }
                         return true;
                 }
@@ -83,106 +97,6 @@ public static class FilmsThumbnailsCarousel
 
             thumbnailIndex++;
         }
-
-        /*  
-      Program._carouselRoots[0].FocusGained += (s, e) =>
-      {
-          var thumbnailSelected = Program._carouselRoots[0].Children[1];
-          _contentView = thumbnailSelected.Children[0];
-          FocusManager.Instance.SetCurrentFocusView(_contentView.Children[_currentIndex]);
-      };
-      Program._carouselRoots[1].FocusGained += (s, e) =>
-      {
-          var thumbnailSelected = Program._carouselRoots[1].Children[1];
-          _contentView = thumbnailSelected.Children[0];
-          FocusManager.Instance.SetCurrentFocusView(_contentView.Children[_currentIndex]);
-      };*/
-        /*
-        Program._carouselRoots[0].KeyEvent += (s, e) =>
-        {
-            if (e.Key.State != Key.StateType.Down)
-                return false;
-
-            var viewportFirstThumbnail = Program.thumbnails.Children[1];
-            _contentView = viewportFirstThumbnail.Children[0];
-
-            switch (e.Key.KeyPressedName)
-            {
-                case "Up":
-                    FocusManager.Instance.SetCurrentFocusView(Program.heroCarousel);
-                    return true;
-
-                case "Left":
-                    if (_currentIndex > 0)
-                    {
-                        MoveToIndex(_currentIndex - 1);
-                        FocusManager.Instance.SetCurrentFocusView(_contentView.Children[_currentIndex]);
-                    }
-                    else
-                    {
-                        Program._carouselRoots.Clear();
-                        Program._sidebar.RestoreFocus();
-                    }
-                    return true;
-
-                case "Right":
-                    if (_contentView.Children.Count > 0)
-                    {
-                        MoveToIndex(_currentIndex + 1);
-                        FocusManager.Instance.SetCurrentFocusView(_contentView.Children[_currentIndex]);
-                    }
-                    return true;
-
-                case "Down":
-                    var viewportLastThumbnail = Program._carouselRoots[1].Children[1];
-                    _contentView = viewportLastThumbnail.Children[0];
-                    FocusManager.Instance.SetCurrentFocusView(Program._carouselRoots[1]);
-                    MoveToIndex(_currentIndex);
-                    return true;
-            }
-            return false;
-        };*/
-        /*
-        Program._carouselRoots[1].KeyEvent += (s, e) =>
-        {
-            if (e.Key.State != Key.StateType.Down)
-                return false;
-
-            var viewportLastThumbnail = Program._carouselRoots[1].Children[1];
-            _contentView = viewportLastThumbnail.Children[0];
-
-            switch (e.Key.KeyPressedName)
-            {
-                case "Up":
-                    var viewportFirstThumbnail = Program._carouselRoots[0].Children[1];
-                    _contentView = viewportFirstThumbnail.Children[0];
-                    FocusManager.Instance.SetCurrentFocusView(Program._carouselRoots[0]);
-                    MoveToIndex(_currentIndex);
-                    return true;
-
-                case "Left":
-                    if (_currentIndex > 0)
-                    {
-                        MoveToIndex(_currentIndex - 1);
-                        FocusManager.Instance.SetCurrentFocusView(_contentView.Children[_currentIndex]);
-                    }
-                    else
-                    {
-                        Program._carouselRoots.Clear();
-                        Program._sidebar.RestoreFocus();
-                    }
-                    return true;
-
-                case "Right":
-                    if (_contentView.Children.Count > 0)
-                    {
-                        MoveToIndex(_currentIndex + 1);
-                        FocusManager.Instance.SetCurrentFocusView(_contentView.Children[_currentIndex]);
-                    }
-                    return true;
-            }
-            return false;
-        };*/
     }
 
     private static void MoveToIndex(int index)

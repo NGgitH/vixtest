@@ -12,7 +12,7 @@
     </Reference>
     <Reference URI="shared%2FUtils%2FUiVideoCarouselBuilder.cs">
       <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512" />
-      <DigestValue>SsapEAjgDOOUMGueF7Nu9O3YqVeZxGIyMTioqTaztJPHIkCOUzfb5fguqwE1E0CAqiiyRebUSEmeXTEPoB5Tqg==</DigestValue>
+      <DigestValue>jNO6vLC3Zi6T1Fnf0fEcXMoCvN4dlY1bUxqvpcJ1Xn3NfxRqzrtXBhX/DJy7SBbCJ1s+d6F4dIuWKPUc/L1d3g==</DigestValue>
     </Reference>
     <Reference URI="shared%2FUtils%2FUiModuleBuilder.cs">
       <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512" />
@@ -20,7 +20,7 @@
     </Reference>
     <Reference URI="shared%2FUtils%2FUiHeroCarouselBuilder.cs">
       <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512" />
-      <DigestValue>RzwX1dDH2TnwRP4Yg11hPPjWudrhgQRqk6TmbIRrqwN+PrzF2/V74vyjz7MXUWxDrUM4MLBTN6b4v5a9Fs3ZYA==</DigestValue>
+      <DigestValue>uQr+eZfmAMP8PQnO63kHKuGERgg9T4OxgjeYxn6E5b+Jga3kZcF7oCGHPllSAjVXqXnHv3v9oLulm5mk3z1m0w==</DigestValue>
     </Reference>
     <Reference URI="shared%2FUtils%2FUiDetailHeroBuilder.cs">
       <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512" />
@@ -56,11 +56,11 @@
     </Reference>
     <Reference URI="bin%2FVix.pdb">
       <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512" />
-      <DigestValue>MmpdhsP+KyFxI/bG0Xy7Vdi11v7WDnaw1UiIwBf8DeXzFO5dmvKkCmEYRZRiem2wgh6RCcoz9aQ8MF+OD9k4cg==</DigestValue>
+      <DigestValue>5sIDmnaARSDF8N5gPf2F0+A2cTG7dyv6wYc2ddLqk7mPl5pITnsHZOWY9BcaYiL3WzmjgQ7YXCGjl5D4vucrAg==</DigestValue>
     </Reference>
     <Reference URI="bin%2FVix.dll">
       <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512" />
-      <DigestValue>4oOkdslkjndJse8NA30EKA/47qPSpqNN7g9jBbG54IOEnAU4uzyRlBYxsM+7dZOMlRW8qK4SCeLLgHj0jD3PCg==</DigestValue>
+      <DigestValue>MMtUwOoKsuHCFuuQFkJGy+S3tEm94ft8RELjCiT/fRSfOSizlyU6SGckWDKqFSDNyLEmlBIlHH4PrMCQCq8MiQ==</DigestValue>
     </Reference>
     <Reference URI="bin%2FSystem.Reactive.dll">
       <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512" />
@@ -107,11 +107,11 @@
     </Reference>
   </SignedInfo>
   <SignatureValue>
-AJWUHgBhxUAEzWYpBZUURH5x3nTnYquAi4A82/vsw2+44e/anzWh6da3V6gLBruoFqxBt0moqB1l
-nKObUbBiFhHaBmRU7F0vvYO4l/catWfrEnOdt0Q40KBjkyNxmZgVNXFIDHxQd21QrxcWf/Ggz+Rb
-MZdP3m2SjjEXwQ+qOyUDV+HeSOItzUGz2t2iGp0VNiuBIPcFQyp9FvEYqEO9VLyuNvhdeOApiTvi
-gRNs8EuvPZyRodmBaFlIAx70vUgQYCQqZ5cQ5/bHXkLvp/e6gOw1lV9MWINwu8XOupVkkC9sL0vs
-7GUHcMexLjKFfv6uL1V7850MtsSjpPrkMVCHMw==
+EUhhmgJph5fOABAWJvslAlD9CeTzDOmbNRs5G/JZaFmabn++ypUMVA0TqpXEsZwuIbMPWEl/u1vX
+H8ro5Fvvl6QhfzEDXWOUEPxGCws5vl9JbLRdjx+WTM04n346nBIk4+bRbzZmW5O4nrd4GC/xq8RU
+AR+GIO6QsyeQgYF3dYzAnhQAuhJ90CIHBunksA9rGaEZiMN67Amjv/4ZgLPBylGsLQBPaNPY1q+s
+OjOihdwvEDdJXmn8z+4CCAElT4GLh4B/RNo8XFBQFbnGlHjBXmGBQBDeUg6n0wiHDxfym4crHStf
+UGtqntEmddebJSu8GO9amYGQxTh6yW//cwweoA==
 </SignatureValue>
   <KeyInfo>
     <X509Data>

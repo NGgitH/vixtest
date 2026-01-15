@@ -18,9 +18,9 @@ public static class UiHeroCarouselBuilder
         // view visible (viewport)
         var carousel = new View
         {
-            SizeHeight = 500,  
+            SizeHeight = 1080,  
             Layout = null, 
-            Size = new Size(1920, 500), //tamaño
+            Size = new Size(1920, 1080), //tamaño
             ClippingMode = ClippingModeType.ClipChildren, //oculta lo que se sale (clave para efecto carrusel)
             Focusable = true //necesitamos para hacer el foco en las diferentes ubicaciones del carrusel
         };
@@ -67,14 +67,14 @@ public static class UiHeroCarouselBuilder
     {
         var card = new View
         {
-            Size = new Size(800, 450),
+            Size = new Size(1920, 1100),
             Focusable = true
         };
 
         var background = new ImageView //imagen
         {
             ResourceUrl = imageUrl,
-            Size = new Size(800, 450),
+            Size = new Size(1920, 1100),
             FittingMode = FittingModeType.ScaleToFill,
             SamplingMode = SamplingModeType.Box
         };
@@ -104,8 +104,8 @@ public static class UiHeroCarouselBuilder
     {
         _indicatorContainer = new View //Los centra abajo del carrusel.
         {
-            Size = new Size(1920, 40),
-            Position = new Position(0, 460),
+            Size = new Size(1920, 60),
+            Position = new Position(0, 950),
             Layout = new LinearLayout
             {
                 LinearOrientation = LinearLayout.Orientation.Horizontal,
@@ -119,8 +119,8 @@ public static class UiHeroCarouselBuilder
             var dot = new View //círculo perfecto y solo el primero activo
             {
                 Name = i.ToString(),
-                Size = new Size(10, 10),
-                CornerRadius = 5,
+                Size = new Size(20, 20),
+                CornerRadius = 10,
                 BackgroundColor = i == 0 ? Color.White : new Color(1, 1, 1, 0.4f)
             };
 

@@ -5,10 +5,15 @@ public static class FilmsHeroCarousel
 {
     private static Timer _autoPlayTimer; //timer para avanzar automaticamente 
     private static int _currentHeroIndex;
-    private static int _cardWidth = 800; //ancho de cada tarjeta (800px)
+    private static int _cardWidth = 1920; //ancho de cada tarjeta (1920px)
 
     public static void Events()
     {
+        Program.heroCarousel.FocusGained += (s, e) =>
+        {
+            Program.ScrollToTheBeginPosition(Program.heroCarousel);
+        };
+
         Program.heroCarousel.KeyEvent += (s, e) =>
         {
             if (e.Key.State != Key.StateType.Down)

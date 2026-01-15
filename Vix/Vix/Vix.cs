@@ -48,7 +48,8 @@ namespace Vix
                     CellPadding = new Size2D(0, 40)
                 },
                 Focusable = true,
-                Sensitive = true
+                Sensitive = true,
+                Position = new Position(0, 950)
             };
 
             // 1. ÁREA DE CONTENIDO (Fondo)
@@ -130,23 +131,27 @@ namespace Vix
                     //if (heroCarousel == null)
                     //{
                     heroCarousel = UiModuleBuilder.Build(heroAmounts.node, "HERO_CAROUSEL");
-                    sectionContainer.Add(heroCarousel);
+                    _contentArea.Add(heroCarousel);
                     //}
 
                     var thumbnailsAmounts = ui.data.uiPage.uiModules.edges.Where(h => h.node.moduleType == "VIDEO_CAROUSEL").ToList();
                     int thumbnailPosition = 0;
                     foreach (var item in thumbnailsAmounts)
                     {
-                       // if (_carouselRoots.Count != thumbnailsAmounts.Count)
-                        //{
-                        thumbnails = UiModuleBuilder.Build(item.node, "VIDEO_CAROUSEL", $"{thumbnailPosition}");
-                           // _carouselRoots.Clear();
-                        sectionContainer.Add(thumbnails);
-                        _carouselRoots.Add(thumbnails);
-                        thumbnailPosition++;
-                     //   }
+                        if (_carouselRoots.Count != thumbnailsAmounts.Count)
+                        {
+                            thumbnails = UiModuleBuilder.Build(item.node, "VIDEO_CAROUSEL", $"{thumbnailPosition}");
+                            Program.ScrollToTheBeginPosition(thumbnails);
+
+                            sectionContainer.Add(thumbnails);
+                            _carouselRoots.Add(thumbnails);
+                            if (thumbnailPosition != 0)
+                            {
+                                Program._carouselRoots[thumbnailPosition].Opacity = 0f;
+                            }
+                            thumbnailPosition++;
+                        }
                     }
-;
                     _contentArea.Add(sectionContainer);
 
                     //input del control remoto
@@ -172,6 +177,42 @@ namespace Vix
             root.Add(_sidebar);        
 
             _sidebar.RestoreFocus();
+        }
+
+        public static void ScrollToViewInNovelSection(View target)
+        {
+            if (target == null || sectionContainer == null)
+                return;
+
+            // posición Y del child dentro del container
+            float targetY = target.PositionY;
+
+            var animation = new Animation(300);
+            animation.AnimateTo(
+                sectionContainer,
+                "PositionY",
+                -targetY + 800, // margen superior
+                new AlphaFunction(AlphaFunction.BuiltinFunctions.EaseInOut)
+            );
+            animation.Play();
+        }
+
+        public static void ScrollToTheBeginPosition(View target)
+        {
+            if (target == null || sectionContainer == null)
+                return;
+
+            // posición Y del child dentro del container
+            float targetY = target.PositionY;
+
+            var animation = new Animation(300);
+            animation.AnimateTo(
+                sectionContainer,
+                "PositionY",
+                1000, // margen superior
+                new AlphaFunction(AlphaFunction.BuiltinFunctions.EaseInOut)
+            );
+            animation.Play();
         }
 
         private void ClearContentArea()

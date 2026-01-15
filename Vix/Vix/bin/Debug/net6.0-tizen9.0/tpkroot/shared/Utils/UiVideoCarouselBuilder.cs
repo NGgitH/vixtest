@@ -1,6 +1,5 @@
 ﻿using Tizen.NUI;
 using Tizen.NUI.BaseComponents;
-using Tizen.Pims.Contacts.ContactsViews;
 using TizenDotNet1.shared.Dtos;
 using Color = Tizen.NUI.Color;
 using NUISize = Tizen.NUI.Size;
@@ -23,7 +22,7 @@ public static class UiVideoCarouselBuilder
             {
                 LinearOrientation = LinearLayout.Orientation.Vertical,
                 CellPadding = new Size2D(0, 20)
-            }, 
+            },
             Name = name
         };
         // 🏷 TÍTULO
@@ -31,7 +30,7 @@ public static class UiVideoCarouselBuilder
         {
             Text = node.trackingMetadataJson.ui_module_title ?? "Recomendado para ti",
             TextColor = Color.White,
-            PointSize = 30,
+            PointSize = 50,
             Padding = new Extents(0, 0, 0, 0)
         });
 
@@ -39,7 +38,7 @@ public static class UiVideoCarouselBuilder
         {
             SizeHeight = 160,
             ClippingMode = ClippingModeType.ClipChildren,
-            Layout = null, // NO layout vertical acá
+            Layout = null,
         };
 
         //View que se mueve
@@ -47,7 +46,7 @@ public static class UiVideoCarouselBuilder
         {
             Layout = new LinearLayout
             {
-                LinearOrientation = LinearLayout.Orientation.Horizontal, //que orientacion tiene el carrusel
+                LinearOrientation = LinearLayout.Orientation.Horizontal, 
                 CellPadding = new Size2D(30, 0)
             }
         };

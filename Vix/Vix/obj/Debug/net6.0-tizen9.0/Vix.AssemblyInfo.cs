@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Vix")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2fe64c076b157080b69e2850790480c4e440708e")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f121ef899ec0af78034944c7485b2cc5d496bf64")]
 [assembly: System.Reflection.AssemblyProductAttribute("Vix")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Vix")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
