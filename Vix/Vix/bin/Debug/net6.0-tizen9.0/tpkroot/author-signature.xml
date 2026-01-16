@@ -56,11 +56,11 @@
     </Reference>
     <Reference URI="bin%2FVix.pdb">
       <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512" />
-      <DigestValue>bXTNZhx/J3SYlx02xDpr3Ju7luIMek4M/7Y2AgrZutHyA5rbNfyX7ORpL/XR9+W6OwG3vAxxLnYv630+HPmpwQ==</DigestValue>
+      <DigestValue>HD7rQmbnIZVBb/cfKHhTCJNH20WOZCXnfkVgfq6Ajb4rPE8bfrmx1HdhFph1ivX3tsqyuV5g9+ZYcIJqnlCCGw==</DigestValue>
     </Reference>
     <Reference URI="bin%2FVix.dll">
       <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512" />
-      <DigestValue>dvmPKd9e+HuFcplV2oRYTr+njGC0AisusyPzz1U5UYEHNNdQLY+dLRvbpWuG7QEPHSF8SJBrrKRL3mb63WJ4ug==</DigestValue>
+      <DigestValue>CQqv2+OrhEh5aQB3s7uwkdOplObzwSxJYmRUtqeRgmENWsBGyCj9VVU00VRhlPAGzjg7JimhwJyy9Pfvs2oiDg==</DigestValue>
     </Reference>
     <Reference URI="bin%2FSystem.Reactive.dll">
       <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512" />
@@ -107,11 +107,11 @@
     </Reference>
   </SignedInfo>
   <SignatureValue>
-E7aH2uiPcPvbx2B+eHICzmgcSpfJulx+6SlXDqSitnVnWXbA8hnZmt9OHLev4bikz4I6nPh832Bm
-KmIJJWbYSsrjA0rGGOWC49hdhzy6FvgUeCcKSMOSnoY55+VB2fAumayrHZ13b8Xd5eOB7x6VqRtA
-Yoj8ALVd3HwY+WTH/JWSYNwEZlj54ju7XKdae4uZUvPFixQ/TMjQ/nw+Qfyo/yIEfI5PeqybSi2W
-OqXQ5/yaZvgvDs/A9xJR6ngRrGnrxVsdj2Szz1Xj16mIyYZ/3JXmAY5OQjMyuo/6PLFc3bw5vWKk
-IlVxWuDCfakbZ4y/BzjMrGPZkDPo+UqojUaY+A==
+Vsy1F1vmUROG7yHr23MZrwn4iak3Tz8ica35bzB78u/DWi+8CTazzHX9tfRnGRXkAvJLsvb/SRYC
+Qsc+DtqQa0Amm+nSl4B7iCd4qY+hS7N1zm1JJN76It8lS0VZ7Mer4fA3e9yeKBAaf0sirv5z1PKG
+DtCeWO0vnmmqA0K5SKxVm7M673UICSuDii+a6NXOL0NWcfNfXbL1QcTaw2X//xccPL9lYyRZiwLQ
+YiwR4NUO/rH9PIL/7AUiI9b+TjV17MZH9KBP260UR8uPG01LroIrkNkdTZ/piTIce1DImUeuKPZL
+hvQD2QM/Xrr+sUcNVwriRi84tmFfdranlo1TvA==
 </SignatureValue>
   <KeyInfo>
     <X509Data>

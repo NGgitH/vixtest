@@ -56,11 +56,11 @@
     </Reference>
     <Reference URI="bin%2FVix.pdb">
       <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512" />
-      <DigestValue>bXTNZhx/J3SYlx02xDpr3Ju7luIMek4M/7Y2AgrZutHyA5rbNfyX7ORpL/XR9+W6OwG3vAxxLnYv630+HPmpwQ==</DigestValue>
+      <DigestValue>HD7rQmbnIZVBb/cfKHhTCJNH20WOZCXnfkVgfq6Ajb4rPE8bfrmx1HdhFph1ivX3tsqyuV5g9+ZYcIJqnlCCGw==</DigestValue>
     </Reference>
     <Reference URI="bin%2FVix.dll">
       <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512" />
-      <DigestValue>dvmPKd9e+HuFcplV2oRYTr+njGC0AisusyPzz1U5UYEHNNdQLY+dLRvbpWuG7QEPHSF8SJBrrKRL3mb63WJ4ug==</DigestValue>
+      <DigestValue>CQqv2+OrhEh5aQB3s7uwkdOplObzwSxJYmRUtqeRgmENWsBGyCj9VVU00VRhlPAGzjg7JimhwJyy9Pfvs2oiDg==</DigestValue>
     </Reference>
     <Reference URI="bin%2FSystem.Reactive.dll">
       <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512" />
@@ -100,7 +100,7 @@
     </Reference>
     <Reference URI="author-signature.xml">
       <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512" />
-      <DigestValue>Q63lRDiLBUbJCIsW/EzXnajnymBkt19hBIStuHqHn3yXhgu9xj6MB9sg8JdmkiURXte3Zvoii3Zlo4FQURmbfA==</DigestValue>
+      <DigestValue>/HrlR/+Gefg/O6Ve7Qp4+r4PblGxYegrHY8KJuILLhBcCEu+GpsSCbFr0x+QZYwX1H/gvTlNfBAiv3xjEB4fbA==</DigestValue>
     </Reference>
     <Reference URI="#prop">
       <Transforms>
@@ -111,11 +111,11 @@
     </Reference>
   </SignedInfo>
   <SignatureValue>
-G3LppHJn3p9vt43hF8E3xxJGmy2sUDZURiJ+mFNmR+1ukvcg0fSBse7K/L/StykT1TcrIt9pgtBO
-fQ6+4fU6UoB6sGkOvGQk4bQr2yz3s3OWgRu1scj8LagNX54djlpRJwi6duzvpbwKoJvBjDhFbDh9
-tV0yijSjtmApgtg/Nhq3QURTi8gNdxnDKeJuSHnFXZXAO0vkEijfuTVt7X3xlL4UoVfTS+Fc1VRm
-5xiQS8Nj66CfhC+r6Gkm8ey9O2Nq3C/1o+7TLv4On36VR+Vvmfzxq1NI5FuQEVsbJUnGaN24kjx1
-TyWcdY0eJq6/rlwZ4Y3ZXFd9nfty0yDWx0oJ+A==
+Q1HGf111/maZ+qWqRbdgYBNkAWE9ZoscfsMpbXOl1hOx0/eyYbK8eu6DHrWmoNMgKRs11SNOK4RS
+Zcubgqc59w8QcfMbOIWsHTVFnHpY+Lpt9gN+sM6HamyaI6hOxqY0SWLcOO+Jld1VuWEKIyGoqFVu
+NLgrbd9L8R+nLDpB8Po0EzqIyoXDXbh2VKgbaphX/Dunov7wZE/GuwW105Tbz17xetUgyFFxdijf
+UQaidPMj4uNxcpkxgPr6GD4CPePQ5EmjvRDkhsBNXAAB5nIZxOgvBCgFZQocehYr4jH49uW41b8w
+Y1V1ZsayaM3jwfVnA2CKimv90TEDVEE9GQxhVA==
 </SignatureValue>
   <KeyInfo>
     <X509Data>
