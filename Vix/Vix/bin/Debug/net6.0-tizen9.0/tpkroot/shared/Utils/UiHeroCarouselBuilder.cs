@@ -1,10 +1,6 @@
-﻿using System.Collections.Generic;
-using System.Linq;
-using Tizen.Multimedia.Util;
-using Tizen.NUI;
+﻿using Tizen.NUI;
 using Tizen.NUI.BaseComponents;
 using TizenDotNet1.shared.Dtos;
-using Vix;
 
 namespace TizenDotNet1.shared.Utils;
 
@@ -19,9 +15,9 @@ public static class UiHeroCarouselBuilder
         // view visible (viewport)
         var carousel = new View
         {
-            SizeHeight = 1080,  
-            Layout = null, 
-            Size = new Size(1920, 1080), //tamaño
+            SizeHeight = 1100,
+            Layout = null,
+            Size = new Size(1920, 1100), //tamaño
             ClippingMode = ClippingModeType.ClipChildren, //oculta lo que se sale (clave para efecto carrusel)
             Focusable = true //necesitamos para hacer el foco en las diferentes ubicaciones del carrusel
         };
@@ -48,20 +44,10 @@ public static class UiHeroCarouselBuilder
             // demo
             var card = CreateHeroCard(
                 item.node.landscapeFillImage.link, //imagen
-                item.node.clickTrackingJson.ui_content_title //titulo
+                item.node.clickTrackingJson.ui_content_title, //titulo
+                item.node.logoImage.link
             );
-
             int capturedIndex = index;
-
-            var viewName = new ImageView //imagen
-            {
-                ResourceUrl = item.node.landscapeFillImage.link,
-                Size = new Size(60, 60),
-                FittingMode = FittingModeType.ScaleToFill,
-                SamplingMode = SamplingModeType.Box
-            };
-            _contentView.Add(viewName);
-
             _contentView.Add(card);
             index++;
         }
@@ -69,19 +55,17 @@ public static class UiHeroCarouselBuilder
         //Se crean tantos puntos como imagenes.
         carousel.Add(CreateIndicators(node.contents.edges.Count));
 
-
-
-
         return carousel;
     }
 
     // crear Card individual
-    private static View CreateHeroCard(string imageUrl, string title)
+    private static View CreateHeroCard(string imageUrl, string title, string titleImageUrl)
     {
         var card = new View
         {
             Size = new Size(1920, 1100),
-            Focusable = true
+            Focusable = true,
+            ClippingMode = ClippingModeType.Disabled
         };
 
         var background = new ImageView //imagen
@@ -97,17 +81,72 @@ public static class UiHeroCarouselBuilder
             BackgroundColor = new Color(0, 0, 0, 0.4f) //fondo oscuro semitransparente
         };
 
+        var content = new View
+        {
+            Size = new Size(900, 500),
+            Position = new Position(120, 420),
+            Layout = new LinearLayout
+            {
+                LinearOrientation = LinearLayout.Orientation.Vertical,
+                CellPadding = new Size2D(0, 20)
+            },
+            Padding = new Extents(50, 0, 0, 0),
+            ClippingMode = ClippingModeType.Disabled
+        };
+
+        // 🖼️ Logo del título
+        var titleImage = new ImageView
+        {
+            ResourceUrl = titleImageUrl, // 👈 tu imagen
+            Size = new Size(400, 250),
+            FittingMode = FittingModeType.FitHeight
+        };
+        /*
         var titleLabel = new TextLabel //título abajo
         {
             Text = title,
             TextColor = Color.White,
             VerticalAlignment = VerticalAlignment.Bottom,
-            Padding = new Extents(20, 20, 20, 20)
+            Padding = new Extents(0, 0, 20, 120)
+        };*/
+
+        var fontStyle = new PropertyMap();
+        fontStyle.Insert("family", new PropertyValue("SamsungOne"));
+        fontStyle.Insert("weight", new PropertyValue("bold"));
+
+        var metadata = new TextLabel
+        {
+            Text = "Drama  •  Romance  •  Acción",
+            TextColor = Color.White,
+            PointSize = 22,
+            FontStyle = fontStyle,
+            ClippingMode = ClippingModeType.Disabled,
         };
+
+        var buttonsRow = new View
+        {
+            Layout = new LinearLayout
+            {
+                LinearOrientation = LinearLayout.Orientation.Vertical,
+                CellPadding = new Size2D(0, 24)
+            },
+            ClippingMode = ClippingModeType.Disabled,
+        };
+
+        buttonsRow.Add(CreatePrimaryButton("Ver ahora"));
+        buttonsRow.Add(CreateSecondaryButton("Más información"));
+
+        // 🧱 Armado
+        content.Add(titleImage);
+        content.Add(metadata);
+        content.Add(buttonsRow);
 
         card.Add(background);
         card.Add(overlay);
-        card.Add(titleLabel);
+        //card.Add(titleLabel);
+
+        card.Add(content);
+
 
         return card;
     }
@@ -161,4 +200,69 @@ public static class UiHeroCarouselBuilder
         CarouselRoot.Opacity = 1f;
         CarouselRoot.Sensitive = true;
     }
+
+    private static View CreateBaseButton(
+        string text,
+        Color backgroundColor)
+    {
+        var button = new View
+        {
+            Size = new Size(306, 84),
+            BackgroundColor = backgroundColor,
+            CornerRadius = 8,
+            Focusable = true,
+            BorderlineWidth = 0
+        };
+
+        var fontStyle = new PropertyMap();
+        fontStyle.Insert("family", new PropertyValue("SamsungOne"));
+        fontStyle.Insert("weight", new PropertyValue("bold"));
+
+        var label = new TextLabel
+        {
+            Text = text,
+            TextColor = Color.White,
+            PointSize = 28,
+            HorizontalAlignment = HorizontalAlignment.Begin,
+            VerticalAlignment = VerticalAlignment.Center,
+            WidthResizePolicy = ResizePolicyType.FillToParent,
+            HeightResizePolicy = ResizePolicyType.FillToParent,
+            MultiLine = false,
+            Padding = new Extents(20, 0, 0, 0),
+            FontStyle = fontStyle
+        };
+
+        button.Add(label);
+
+        // 🔥 FOCO VISUAL REAL
+        button.FocusGained += (s, e) =>
+        {
+            button.BorderlineWidth = 3;
+            button.BorderlineColor = Color.White;
+        };
+
+        button.FocusLost += (s, e) =>
+        {
+            button.BorderlineWidth = 0;
+        };
+
+        return button;
+    }
+
+    private static View CreatePrimaryButton(string text)
+    {
+        return CreateBaseButton(
+            "▶  " + text,
+            new Color(1f, 0.45f, 0f, 1f)
+        );
+    }
+
+    private static View CreateSecondaryButton(string text)
+    {
+        return CreateBaseButton(
+            text,
+            new Color(0.25f, 0.25f, 0.25f, 1f)
+        );
+    }
+
 }

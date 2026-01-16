@@ -152,7 +152,7 @@ namespace Vix
             animation.AnimateTo(
                 sectionContainer,
                 "PositionY",
-                1000, // margen superior
+                1100, // margen superior
                 new AlphaFunction(AlphaFunction.BuiltinFunctions.EaseInOut)
             );
             animation.Play();

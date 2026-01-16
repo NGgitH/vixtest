@@ -23,7 +23,8 @@ public static class UiVideoCarouselBuilder
                 LinearOrientation = LinearLayout.Orientation.Vertical,
                 CellPadding = new Size2D(0, 20)
             },
-            Name = name
+            Name = name,
+            Padding = new Extents(170,0,0,0)
         };
         // 🏷 TÍTULO
         root.Add(new TextLabel
