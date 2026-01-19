@@ -3,8 +3,16 @@
   "WorkspaceRootPath": "C:\\Code\\VIX\\vixtest\\Vix\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{4FC600A9-FD5A-437B-B9B8-8950D51DB93F}|Vix\\Vix.csproj|c:\\code\\vix\\vixtest\\vix\\vix\\shared\\utils\\uiherocarouselbuilder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4FC600A9-FD5A-437B-B9B8-8950D51DB93F}|Vix\\Vix.csproj|solutionrelative:vix\\shared\\utils\\uiherocarouselbuilder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{4FC600A9-FD5A-437B-B9B8-8950D51DB93F}|Vix\\Vix.csproj|c:\\code\\vix\\vixtest\\vix\\vix\\shared\\utils\\uivideocarouselbuilder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4FC600A9-FD5A-437B-B9B8-8950D51DB93F}|Vix\\Vix.csproj|solutionrelative:vix\\shared\\utils\\uivideocarouselbuilder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4FC600A9-FD5A-437B-B9B8-8950D51DB93F}|Vix\\Vix.csproj|c:\\code\\vix\\vixtest\\vix\\vix\\shared\\utils\\uidetailherobuilder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4FC600A9-FD5A-437B-B9B8-8950D51DB93F}|Vix\\Vix.csproj|solutionrelative:vix\\shared\\utils\\uidetailherobuilder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4FC600A9-FD5A-437B-B9B8-8950D51DB93F}|Vix\\Vix.csproj|c:\\code\\vix\\vixtest\\vix\\vix\\ui\\sidebarview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -23,16 +31,8 @@
       "RelativeMoniker": "D:0:0:{4FC600A9-FD5A-437B-B9B8-8950D51DB93F}|Vix\\Vix.csproj|solutionrelative:vix\\services\\events\\filmsherocarousel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4FC600A9-FD5A-437B-B9B8-8950D51DB93F}|Vix\\Vix.csproj|c:\\code\\vix\\vixtest\\vix\\vix\\shared\\utils\\uiherocarouselbuilder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4FC600A9-FD5A-437B-B9B8-8950D51DB93F}|Vix\\Vix.csproj|solutionrelative:vix\\shared\\utils\\uiherocarouselbuilder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{4FC600A9-FD5A-437B-B9B8-8950D51DB93F}|Vix\\Vix.csproj|c:\\code\\vix\\vixtest\\vix\\vix\\shared\\dtos\\builderdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4FC600A9-FD5A-437B-B9B8-8950D51DB93F}|Vix\\Vix.csproj|solutionrelative:vix\\shared\\dtos\\builderdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4FC600A9-FD5A-437B-B9B8-8950D51DB93F}|Vix\\Vix.csproj|c:\\code\\vix\\vixtest\\vix\\vix\\shared\\utils\\uidetailherobuilder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4FC600A9-FD5A-437B-B9B8-8950D51DB93F}|Vix\\Vix.csproj|solutionrelative:vix\\shared\\utils\\uidetailherobuilder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4FC600A9-FD5A-437B-B9B8-8950D51DB93F}|Vix\\Vix.csproj|c:\\code\\vix\\vixtest\\vix\\vix\\shared\\utils\\uimodulebuilder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -50,36 +50,36 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 0,
               "Title": "UiHeroCarouselBuilder.cs",
               "DocumentMoniker": "C:\\Code\\VIX\\vixtest\\Vix\\Vix\\shared\\Utils\\UiHeroCarouselBuilder.cs",
               "RelativeDocumentMoniker": "Vix\\shared\\Utils\\UiHeroCarouselBuilder.cs",
               "ToolTip": "C:\\Code\\VIX\\vixtest\\Vix\\Vix\\shared\\Utils\\UiHeroCarouselBuilder.cs",
               "RelativeToolTip": "Vix\\shared\\Utils\\UiHeroCarouselBuilder.cs",
-              "ViewState": "AgIAAEcAAAAAAAAAAAAgwF4AAAAKAAAAAAAAAA==",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAYwIEAAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-01-07T14:14:49.463Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 2,
               "Title": "UiDetailHeroBuilder.cs",
               "DocumentMoniker": "C:\\Code\\VIX\\vixtest\\Vix\\Vix\\shared\\Utils\\UiDetailHeroBuilder.cs",
               "RelativeDocumentMoniker": "Vix\\shared\\Utils\\UiDetailHeroBuilder.cs",
               "ToolTip": "C:\\Code\\VIX\\vixtest\\Vix\\Vix\\shared\\Utils\\UiDetailHeroBuilder.cs",
               "RelativeToolTip": "Vix\\shared\\Utils\\UiDetailHeroBuilder.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAAwA4AAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAQwA4AAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-01-15T14:14:27.039Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "FilmsThumbnailsCarousel.cs",
               "DocumentMoniker": "C:\\Code\\VIX\\vixtest\\Vix\\Vix\\services\\Events\\FilmsThumbnailsCarousel.cs",
               "RelativeDocumentMoniker": "Vix\\services\\Events\\FilmsThumbnailsCarousel.cs",
@@ -87,12 +87,11 @@
               "RelativeToolTip": "Vix\\services\\Events\\FilmsThumbnailsCarousel.cs",
               "ViewState": "AgIAABYAAAAAAAAAAAAQwBYAAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-12T17:14:41.447Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-12T17:14:41.447Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "Vix.cs",
               "DocumentMoniker": "C:\\Code\\VIX\\vixtest\\Vix\\Vix\\Vix.cs",
               "RelativeDocumentMoniker": "Vix\\Vix.cs",
@@ -100,8 +99,7 @@
               "RelativeToolTip": "Vix\\Vix.cs",
               "ViewState": "AgIAAHgAAAAAAAAAAAAAwJwAAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-07T13:51:58.59Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-07T13:51:58.59Z"
             },
             {
               "$type": "Document",
@@ -117,7 +115,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "BuilderDto.cs",
               "DocumentMoniker": "C:\\Code\\VIX\\vixtest\\Vix\\Vix\\shared\\Dtos\\BuilderDto.cs",
               "RelativeDocumentMoniker": "Vix\\shared\\Dtos\\BuilderDto.cs",
@@ -129,7 +127,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "UiVideoCarouselBuilder.cs",
               "DocumentMoniker": "C:\\Code\\VIX\\vixtest\\Vix\\Vix\\shared\\Utils\\UiVideoCarouselBuilder.cs",
               "RelativeDocumentMoniker": "Vix\\shared\\Utils\\UiVideoCarouselBuilder.cs",
@@ -137,8 +135,7 @@
               "RelativeToolTip": "Vix\\shared\\Utils\\UiVideoCarouselBuilder.cs",
               "ViewState": "AgIAAAgAAAAAAAAAAAAAwBoAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-07T14:26:58.794Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-07T14:26:58.794Z"
             },
             {
               "$type": "Document",
@@ -154,20 +151,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "SidebarView.cs",
               "DocumentMoniker": "C:\\Code\\VIX\\vixtest\\Vix\\Vix\\ui\\SidebarView.cs",
               "RelativeDocumentMoniker": "Vix\\ui\\SidebarView.cs",
               "ToolTip": "C:\\Code\\VIX\\vixtest\\Vix\\Vix\\ui\\SidebarView.cs",
               "RelativeToolTip": "Vix\\ui\\SidebarView.cs",
-              "ViewState": "AgIAAHYAAAAAAAAAAAAtwFsAAAA4AAAAAAAAAA==",
+              "ViewState": "AgIAAEcAAAAAAAAAAAAgwGIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-07T13:51:11.634Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-07T13:51:11.634Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "FilmsHeroCarousel.cs",
               "DocumentMoniker": "C:\\Code\\VIX\\vixtest\\Vix\\Vix\\services\\Events\\FilmsHeroCarousel.cs",
               "RelativeDocumentMoniker": "Vix\\services\\Events\\FilmsHeroCarousel.cs",
@@ -175,8 +171,7 @@
               "RelativeToolTip": "Vix\\services\\Events\\FilmsHeroCarousel.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAAAAAA0AAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-15T16:44:39.885Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-15T16:44:39.885Z"
             }
           ]
         }
