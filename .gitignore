@@ -1,3 +1,33 @@
+## [ CONCEPTOS BÁSICOS DE .NET ]
+[Bb]in/
+[Oo]bj/
+out/
 .vs/
-bin/
-obj/
+.vscode/
+
+## [ ARCHIVOS DE USUARIO Y CONFIGURACIÓN LOCAL ]
+*.user
+*.userosscache
+*.suo
+*.userprefs
+*.sln.docstates
+
+## [ DYNAMICS / AZURE / SECRETS ]
+# No subas tus credenciales de API (¡importante para tus integraciones!)
+.env
+appsettings.Development.json
+secrets.json
+*.pfx
+*.publishsettings
+
+## [ PAQUETES Y HERRAMIENTAS ]
+.nuget/
+packages/
+# Si usas algo de JS para tus landing pages o integraciones:
+node_modules/
+
+## [ TEMPORALES DE SISTEMA ]
+$RECYCLE.BIN/
+Thumbs.db
+desktop.ini
+/Vix/Vix/Vix.csproj
