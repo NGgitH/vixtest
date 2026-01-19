@@ -213,9 +213,8 @@ namespace Vix
 
                 FilmsHeroCarousel.StartAutoPlay();
                 var heroAmounts = _novelPageData.data.uiPage.uiModules.edges.Where(h => h.node.moduleType == "HERO_CAROUSEL").FirstOrDefault();
-                //if (heroCarousel == null)
-                //{
-                heroCarousel = UiModuleBuilder.Build(heroAmounts.node, "HERO_CAROUSEL");
+
+                heroCarousel = UiModuleBuilder.Build(heroAmounts.node, "HERO_CAROUSEL","", "nov");
 
                 var i = 0;
                 foreach (var item in heroAmounts.node.contents.edges)
@@ -227,7 +226,7 @@ namespace Vix
     
                 currentButton = primaryButton[0].Name;
                 _contentArea.Add(heroCarousel);
-                //}
+
                 var thumbnailsAmounts = _novelPageData.data.uiPage.uiModules.edges.Where(h => h.node.moduleType == "VIDEO_CAROUSEL").ToList();
                 int thumbnailPosition = 0;
                 foreach (var item in thumbnailsAmounts)

@@ -1,6 +1,7 @@
 ﻿using Tizen.NUI;
 using Tizen.NUI.BaseComponents;
 using TizenDotNet1.shared.Dtos;
+using Vix;
 
 namespace TizenDotNet1.shared.Utils;
 
@@ -10,7 +11,7 @@ public static class UiHeroCarouselBuilder
     private static View _indicatorContainer; //contenedor visual de los puntos
     public static View CarouselRoot { get; private set; }
 
-    public static View BuildHeroCarousel(Node node)
+    public static View BuildHeroCarousel(Node node, string section)
     {
         // view visible (viewport)
         var carousel = new View
@@ -47,7 +48,8 @@ public static class UiHeroCarouselBuilder
             var card = CreateHeroCard(
                 item.node.landscapeFillImage.link, //imagen
                 item.node.clickTrackingJson.ui_content_title, //titulo
-                item.node.logoImage.link
+                item.node.logoImage.link,
+                section
             );
             int capturedIndex = index;
             _contentView.Add(card);
@@ -62,7 +64,7 @@ public static class UiHeroCarouselBuilder
     }
 
     // crear Card individual
-    private static View CreateHeroCard(string imageUrl, string title, string titleImageUrl)
+    private static View CreateHeroCard(string imageUrl, string title, string titleImageUrl, string section)
     {
         var card = new View
         {
@@ -99,10 +101,9 @@ public static class UiHeroCarouselBuilder
             ClippingMode = ClippingModeType.Disabled
         };
 
-        // 🖼️ Logo del título
         var titleImage = new ImageView
         {
-            ResourceUrl = titleImageUrl, // 👈 tu imagen
+            ResourceUrl = titleImageUrl,
             Size = new Size(400, 250),
             FittingMode = FittingModeType.FitHeight
         };
@@ -132,11 +133,11 @@ public static class UiHeroCarouselBuilder
         };
 
         var primaryButton = CreatePrimaryButton("Ver ahora");
-        primaryButton.Name = "PrimaryButton " + title; //necesario para saber cual boton le pego
+        primaryButton.Name = "PrimaryButton   "+ section + title; //necesario para saber cual boton le pego
         buttonsRow.Add(primaryButton);
 
         var secondaryButton = CreateSecondaryButton("Más información");
-        secondaryButton.Name = "SecondaryButton " + title; //necesario para saber cual boton le pego
+        secondaryButton.Name = "SecondaryButton " + section + title; //necesario para saber cual boton le pego
         buttonsRow.Add(secondaryButton);
 
         // 🧱 Armado
@@ -239,13 +240,19 @@ public static class UiHeroCarouselBuilder
             if (e.Key.State == Key.StateType.Down &&
                 e.Key.KeyPressedName == "Return")
             {
-                var asdasda = FocusManager.Instance.GetCurrentFocusView().Name;
+                var button = FocusManager.Instance.GetCurrentFocusView().Name.Substring(16);
+                var title = button.Substring(3);
+                switch (button.Substring(0, 3))
+                {
+                    case "nov":
+                        return true;
+                }
+
                 return true;
             }
             return false;
         };
 
-        // 🔥 FOCO VISUAL REAL
         button.FocusGained += (s, e) =>
         {
             button.BorderlineWidth = 3;
