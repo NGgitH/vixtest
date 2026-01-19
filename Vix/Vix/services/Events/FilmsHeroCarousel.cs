@@ -4,16 +4,28 @@ namespace Vix.services.Events;
 public static class FilmsHeroCarousel
 {
     private static Timer _autoPlayTimer; //timer para avanzar automaticamente 
-    private static int _currentHeroIndex;
+    private static int _currentHeroIndex = 0;
     private static int _cardWidth = 1920; //ancho de cada tarjeta (1920px)
 
     public static void Events()
     {
         Program.heroCarousel.FocusGained += (s, e) =>
         {
+            StartAutoPlay();
+
             Program.ScrollToTheBeginPosition(Program.heroCarousel);
+
+            if (Program.currentButton.Contains("PrimaryButton "))
+            {
+                FocusManager.Instance.SetCurrentFocusView(Program.primaryButton[_currentHeroIndex]);
+            }
+            if (Program.currentButton.Contains("SecondaryButton "))
+            {
+                FocusManager.Instance.SetCurrentFocusView(Program.secondaryButton[_currentHeroIndex]);
+            }
         };
 
+        //corusel key events
         Program.heroCarousel.KeyEvent += (s, e) =>
         {
             if (e.Key.State != Key.StateType.Down)
@@ -27,21 +39,30 @@ public static class FilmsHeroCarousel
 
             switch (e.Key.KeyPressedName)
             {
+                case "Up":
+                    Program.currentButton = Program.primaryButton[_currentHeroIndex].Name;
+                    FocusManager.Instance.SetCurrentFocusView(Program.primaryButton[_currentHeroIndex]);
+                    return true;
                 case "Down":
-                    FocusManager.Instance.SetCurrentFocusView(Program._carouselRoots[0]);
+                    if (FocusManager.Instance.GetCurrentFocusView().Name.Contains("PrimaryButton "))
+                    {
+                        Program.currentButton = Program.secondaryButton[_currentHeroIndex].Name;
+                        FocusManager.Instance.SetCurrentFocusView(Program.secondaryButton[_currentHeroIndex]);
+                    }
+                    else
+                    {
+                        StopAutoPlay();
+                        FocusManager.Instance.SetCurrentFocusView(Program._carouselRoots[0]);
+                        Program.currentButton = Program.primaryButton[_currentHeroIndex].Name;
+                    }
                     return true;
                 case "Left":
                     MoveHeroToIndex(_currentHeroIndex - 1);
                     return true;
-
                 case "Right":
                     MoveHeroToIndex(_currentHeroIndex + 1);
                     return true;
 
-                case "Return":
-                    //UiDetailBuilder.OpenDetailScreen(_currentIndex, module);
-                    Tizen.Log.Info("UI", $"Click Hero {_currentHeroIndex}");
-                    return true;
             }
 
             return false;
@@ -56,7 +77,16 @@ public static class FilmsHeroCarousel
 
         _currentHeroIndex = index;
 
-        var animation = new Animation(350); //Suave, 350ms, easing.
+        if (Program.currentButton.Contains("PrimaryButton "))
+        {
+            FocusManager.Instance.SetCurrentFocusView(Program.primaryButton[_currentHeroIndex]);
+        }
+        if (Program.currentButton.Contains("SecondaryButton "))
+        {
+            FocusManager.Instance.SetCurrentFocusView(Program.secondaryButton[_currentHeroIndex]);
+        }
+
+        var animation = new Animation(1000); //Suave, 350ms, easing.
         animation.AnimateTo(
             Program.heroCarousel.Children[0],
             "PositionX",

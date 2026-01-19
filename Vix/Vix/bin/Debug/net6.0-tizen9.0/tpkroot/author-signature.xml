@@ -20,11 +20,11 @@
     </Reference>
     <Reference URI="shared%2FUtils%2FUiHeroCarouselBuilder.cs">
       <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512" />
-      <DigestValue>dwtWbsMKm7HXsRY5g2HQu3UqPF6zURymv8wnjihfybGw7Q0IQeMqgGgVQZ1TneIcbQRxcUdgt/S01SzMEWWLhQ==</DigestValue>
+      <DigestValue>CNMLS1YC1Trf74WcFiwy+PEf2LVyWWQwqk7jus6xtSrZDEOaD3F3hUHLUT2JTyj0CiJdxbfkD6Oo4OFpHCks9w==</DigestValue>
     </Reference>
     <Reference URI="shared%2FUtils%2FUiDetailHeroBuilder.cs">
       <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512" />
-      <DigestValue>eUq4PMfe3lXF2hfPOr9FxfwTrxY3QxCGOg3KcJxlAo2AH0AR1jRZHN/HTlJJc5hBXpc0/sXvDhNom6JUJQgx4w==</DigestValue>
+      <DigestValue>w6MRShDmav1A6R4V+9yVx1Jgv8rsXX4QabAuekTLNK0jrEsnRizwevXs3AboYDr6r1PogJaz1TscPBHkBN6RiA==</DigestValue>
     </Reference>
     <Reference URI="shared%2FUtils%2FUiDetailBuilder.cs">
       <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512" />
@@ -56,11 +56,11 @@
     </Reference>
     <Reference URI="bin%2FVix.pdb">
       <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512" />
-      <DigestValue>HD7rQmbnIZVBb/cfKHhTCJNH20WOZCXnfkVgfq6Ajb4rPE8bfrmx1HdhFph1ivX3tsqyuV5g9+ZYcIJqnlCCGw==</DigestValue>
+      <DigestValue>4s7/w5rZiDukTc+T8Xj4Z+wdFljOcSE3ai/v0N82XXVrgIZteT7D6n+eBzbcvO+jGqVEOdZCkc7UujrSBGoNew==</DigestValue>
     </Reference>
     <Reference URI="bin%2FVix.dll">
       <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512" />
-      <DigestValue>CQqv2+OrhEh5aQB3s7uwkdOplObzwSxJYmRUtqeRgmENWsBGyCj9VVU00VRhlPAGzjg7JimhwJyy9Pfvs2oiDg==</DigestValue>
+      <DigestValue>eAmEnyxEYoEvh/c3pR48CAH9Mbs9WDzoL/hriEG8VzQGRVCbVzMeZZus4p2MLqjf304uA97K4oHaAQpGmtpmqQ==</DigestValue>
     </Reference>
     <Reference URI="bin%2FSystem.Reactive.dll">
       <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512" />
@@ -107,11 +107,11 @@
     </Reference>
   </SignedInfo>
   <SignatureValue>
-Vsy1F1vmUROG7yHr23MZrwn4iak3Tz8ica35bzB78u/DWi+8CTazzHX9tfRnGRXkAvJLsvb/SRYC
-Qsc+DtqQa0Amm+nSl4B7iCd4qY+hS7N1zm1JJN76It8lS0VZ7Mer4fA3e9yeKBAaf0sirv5z1PKG
-DtCeWO0vnmmqA0K5SKxVm7M673UICSuDii+a6NXOL0NWcfNfXbL1QcTaw2X//xccPL9lYyRZiwLQ
-YiwR4NUO/rH9PIL/7AUiI9b+TjV17MZH9KBP260UR8uPG01LroIrkNkdTZ/piTIce1DImUeuKPZL
-hvQD2QM/Xrr+sUcNVwriRi84tmFfdranlo1TvA==
+giOZ4N59g6ZkqgU4XRxNRxmDlLmWWhQ2ncgCDFRAvxZYCfgc0vkY65mEuiHqQF6l1JNjDHscI1QP
+Zo0ndBSLJY8dI86tx8PHJDEr/kquGJ5AQEpex2iWUmrUA3jFz2x64qPxh4I9ulISw9DW03MXXAEj
+9ZUyhYtHioyj1+gMFZ82GhnAmdt91Eto4lqJDEHM8GZVtex0dlQPPGqYfEgRkjYJz2w+uyolYQgo
+MY2Z/4HTtjRxTBqUjxxXoRtVTnbkc9sjr6ZO1h9161Bxd9k6aGAbyVxVyJ+v1tgcsTHoMFn4ddjw
+I2UjFx8Or+UKDWS4fq93L4dIuiefPyzF5Nsn7A==
 </SignatureValue>
   <KeyInfo>
     <X509Data>
