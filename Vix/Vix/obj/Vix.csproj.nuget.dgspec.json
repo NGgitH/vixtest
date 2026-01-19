@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Code\\VIX\\vixtest\\Vix\\Vix\\Vix.csproj": {}
+    "C:\\Users\\uriel.alvarez\\Documents\\Univision\\LatestVix\\vixtest\\Vix\\Vix\\Vix.csproj": {}
   },
   "projects": {
-    "C:\\Code\\VIX\\vixtest\\Vix\\Vix\\Vix.csproj": {
+    "C:\\Users\\uriel.alvarez\\Documents\\Univision\\LatestVix\\vixtest\\Vix\\Vix\\Vix.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Code\\VIX\\vixtest\\Vix\\Vix\\Vix.csproj",
+        "projectUniqueName": "C:\\Users\\uriel.alvarez\\Documents\\Univision\\LatestVix\\vixtest\\Vix\\Vix\\Vix.csproj",
         "projectName": "Vix",
-        "projectPath": "C:\\Code\\VIX\\vixtest\\Vix\\Vix\\Vix.csproj",
-        "packagesPath": "C:\\Users\\nicolas.gatti\\.nuget\\packages\\",
-        "outputPath": "C:\\Code\\VIX\\vixtest\\Vix\\Vix\\obj\\",
+        "projectPath": "C:\\Users\\uriel.alvarez\\Documents\\Univision\\LatestVix\\vixtest\\Vix\\Vix\\Vix.csproj",
+        "packagesPath": "C:\\Users\\uriel.alvarez\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\uriel.alvarez\\Documents\\Univision\\LatestVix\\vixtest\\Vix\\Vix\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\nicolas.gatti\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\uriel.alvarez\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -45,7 +45,7 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "9.0.300"
+        "SdkAnalysisLevel": "10.0.100"
       },
       "frameworks": {
         "net6.0-tizen9.0": {
@@ -71,6 +71,20 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[6.0.36, 6.0.36]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[6.0.36, 6.0.36]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[6.0.36, 6.0.36]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
@@ -79,7 +93,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.308\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.102\\RuntimeIdentifierGraph.json"
         }
       }
     }

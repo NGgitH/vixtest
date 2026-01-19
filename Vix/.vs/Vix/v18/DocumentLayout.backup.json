@@ -1,21 +1,21 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\uriel.alvarez\\Documents\\Univision\\Vix\\",
+  "WorkspaceRootPath": "C:\\Users\\uriel.alvarez\\Documents\\Univision\\LatestVix\\vixtest\\Vix\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{4FC600A9-FD5A-437B-B9B8-8950D51DB93F}|Vix\\Vix.csproj|c:\\users\\uriel.alvarez\\documents\\univision\\vix\\vix\\vix.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{4FC600A9-FD5A-437B-B9B8-8950D51DB93F}|Vix\\Vix.csproj|c:\\users\\uriel.alvarez\\documents\\univision\\latestvix\\vixtest\\vix\\vix\\vix.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4FC600A9-FD5A-437B-B9B8-8950D51DB93F}|Vix\\Vix.csproj|solutionrelative:vix\\vix.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4FC600A9-FD5A-437B-B9B8-8950D51DB93F}|Vix\\Vix.csproj|c:\\users\\uriel.alvarez\\documents\\univision\\vix\\vix\\ui\\sidebarview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{4FC600A9-FD5A-437B-B9B8-8950D51DB93F}|Vix\\Vix.csproj|c:\\users\\uriel.alvarez\\documents\\univision\\latestvix\\vixtest\\vix\\vix\\ui\\sidebarview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4FC600A9-FD5A-437B-B9B8-8950D51DB93F}|Vix\\Vix.csproj|solutionrelative:vix\\ui\\sidebarview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4FC600A9-FD5A-437B-B9B8-8950D51DB93F}|Vix\\Vix.csproj|c:\\users\\uriel.alvarez\\documents\\univision\\vix\\vix\\services\\vixapiservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{4FC600A9-FD5A-437B-B9B8-8950D51DB93F}|Vix\\Vix.csproj|c:\\users\\uriel.alvarez\\documents\\univision\\latestvix\\vixtest\\vix\\vix\\services\\vixapiservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4FC600A9-FD5A-437B-B9B8-8950D51DB93F}|Vix\\Vix.csproj|solutionrelative:vix\\services\\vixapiservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4FC600A9-FD5A-437B-B9B8-8950D51DB93F}|Vix\\Vix.csproj|c:\\users\\uriel.alvarez\\documents\\univision\\vix\\vix\\vix.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
+      "AbsoluteMoniker": "D:0:0:{4FC600A9-FD5A-437B-B9B8-8950D51DB93F}|Vix\\Vix.csproj|c:\\users\\uriel.alvarez\\documents\\univision\\latestvix\\vixtest\\vix\\vix\\vix.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
       "RelativeMoniker": "D:0:0:{4FC600A9-FD5A-437B-B9B8-8950D51DB93F}|Vix\\Vix.csproj|solutionrelative:vix\\vix.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
     }
   ],
@@ -36,47 +36,44 @@
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "SidebarView.cs",
-              "DocumentMoniker": "C:\\Users\\uriel.alvarez\\Documents\\Univision\\Vix\\Vix\\ui\\SidebarView.cs",
+              "DocumentMoniker": "C:\\Users\\uriel.alvarez\\Documents\\Univision\\LatestVix\\vixtest\\Vix\\Vix\\ui\\SidebarView.cs",
               "RelativeDocumentMoniker": "Vix\\ui\\SidebarView.cs",
-              "ToolTip": "C:\\Users\\uriel.alvarez\\Documents\\Univision\\Vix\\Vix\\ui\\SidebarView.cs",
+              "ToolTip": "C:\\Users\\uriel.alvarez\\Documents\\Univision\\LatestVix\\vixtest\\Vix\\Vix\\ui\\SidebarView.cs",
               "RelativeToolTip": "Vix\\ui\\SidebarView.cs",
               "ViewState": "AgIAAHsAAAAAAAAAAAAiwIkAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-23T18:31:16.502Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-23T18:31:16.502Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
               "Title": "VixApiService.cs",
-              "DocumentMoniker": "C:\\Users\\uriel.alvarez\\Documents\\Univision\\Vix\\Vix\\services\\VixApiService.cs",
+              "DocumentMoniker": "C:\\Users\\uriel.alvarez\\Documents\\Univision\\LatestVix\\vixtest\\Vix\\Vix\\services\\VixApiService.cs",
               "RelativeDocumentMoniker": "Vix\\services\\VixApiService.cs",
-              "ToolTip": "C:\\Users\\uriel.alvarez\\Documents\\Univision\\Vix\\Vix\\services\\VixApiService.cs",
+              "ToolTip": "C:\\Users\\uriel.alvarez\\Documents\\Univision\\LatestVix\\vixtest\\Vix\\Vix\\services\\VixApiService.cs",
               "RelativeToolTip": "Vix\\services\\VixApiService.cs",
               "ViewState": "AgIAAF8AAAAAAAAAAAAAAHAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-22T20:22:53.564Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-22T20:22:53.564Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
               "Title": "Vix",
-              "DocumentMoniker": "C:\\Users\\uriel.alvarez\\Documents\\Univision\\Vix\\Vix\\Vix.csproj",
+              "DocumentMoniker": "C:\\Users\\uriel.alvarez\\Documents\\Univision\\LatestVix\\vixtest\\Vix\\Vix\\Vix.csproj",
               "RelativeDocumentMoniker": "Vix\\Vix.csproj",
-              "ToolTip": "C:\\Users\\uriel.alvarez\\Documents\\Univision\\Vix\\Vix\\Vix.csproj",
+              "ToolTip": "C:\\Users\\uriel.alvarez\\Documents\\Univision\\LatestVix\\vixtest\\Vix\\Vix\\Vix.csproj",
               "RelativeToolTip": "Vix\\Vix.csproj",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-12-22T14:41:04.749Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-22T14:41:04.749Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Vix.cs",
-              "DocumentMoniker": "C:\\Users\\uriel.alvarez\\Documents\\Univision\\Vix\\Vix\\Vix.cs",
+              "DocumentMoniker": "C:\\Users\\uriel.alvarez\\Documents\\Univision\\LatestVix\\vixtest\\Vix\\Vix\\Vix.cs",
               "RelativeDocumentMoniker": "Vix\\Vix.cs",
-              "ToolTip": "C:\\Users\\uriel.alvarez\\Documents\\Univision\\Vix\\Vix\\Vix.cs",
+              "ToolTip": "C:\\Users\\uriel.alvarez\\Documents\\Univision\\LatestVix\\vixtest\\Vix\\Vix\\Vix.cs",
               "RelativeToolTip": "Vix\\Vix.cs",
               "ViewState": "AgIAAC8AAAAAAAAAAAAAADkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
