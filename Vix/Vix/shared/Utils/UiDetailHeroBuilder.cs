@@ -13,15 +13,9 @@ public static class UiDetailHeroBuilder
     {
         var root = new View
         {
-           // SizeHeight = 320,
             SizeHeight = 500,
             Layout = null,
             Size = new Size(1920, 500), //tamaño
-            /*Layout = new LinearLayout
-            {
-                LinearOrientation = LinearLayout.Orientation.Horizontal,
-                CellPadding = new Size2D(40, 0)
-            }*/
         };
 
         Image = new ImageView

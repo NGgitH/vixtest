@@ -1,6 +1,7 @@
 ﻿using Tizen.NUI;
 using Tizen.NUI.BaseComponents;
 using TizenDotNet1.shared.Dtos;
+using Vix;
 
 namespace TizenDotNet1.shared.Utils;
 
@@ -10,11 +11,12 @@ public static class UiHeroCarouselBuilder
     private static View _indicatorContainer; //contenedor visual de los puntos
     public static View CarouselRoot { get; private set; }
 
-    public static View BuildHeroCarousel(Node node)
+    public static View BuildHeroCarousel(Node node, string section)
     {
         // view visible (viewport)
         var carousel = new View
         {
+            Name = "novelHeroCarousel",
             SizeHeight = 1100,
             Layout = null,
             Size = new Size(1920, 1100), //tamaño
@@ -34,6 +36,7 @@ public static class UiHeroCarouselBuilder
             }
         };
 
+        //carousel 0
         carousel.Add(_contentView);
 
         int index = 0;
@@ -45,7 +48,8 @@ public static class UiHeroCarouselBuilder
             var card = CreateHeroCard(
                 item.node.landscapeFillImage.link, //imagen
                 item.node.clickTrackingJson.ui_content_title, //titulo
-                item.node.logoImage.link
+                item.node.logoImage.link,
+                section
             );
             int capturedIndex = index;
             _contentView.Add(card);
@@ -53,16 +57,18 @@ public static class UiHeroCarouselBuilder
         }
 
         //Se crean tantos puntos como imagenes.
+        //carousel 1
         carousel.Add(CreateIndicators(node.contents.edges.Count));
 
         return carousel;
     }
 
     // crear Card individual
-    private static View CreateHeroCard(string imageUrl, string title, string titleImageUrl)
+    private static View CreateHeroCard(string imageUrl, string title, string titleImageUrl, string section)
     {
         var card = new View
         {
+            Name = imageUrl,
             Size = new Size(1920, 1100),
             Focusable = true,
             ClippingMode = ClippingModeType.Disabled
@@ -83,6 +89,7 @@ public static class UiHeroCarouselBuilder
 
         var content = new View
         {
+            Name = title,
             Size = new Size(900, 500),
             Position = new Position(120, 420),
             Layout = new LinearLayout
@@ -94,21 +101,12 @@ public static class UiHeroCarouselBuilder
             ClippingMode = ClippingModeType.Disabled
         };
 
-        // 🖼️ Logo del título
         var titleImage = new ImageView
         {
-            ResourceUrl = titleImageUrl, // 👈 tu imagen
+            ResourceUrl = titleImageUrl,
             Size = new Size(400, 250),
             FittingMode = FittingModeType.FitHeight
         };
-        /*
-        var titleLabel = new TextLabel //título abajo
-        {
-            Text = title,
-            TextColor = Color.White,
-            VerticalAlignment = VerticalAlignment.Bottom,
-            Padding = new Extents(0, 0, 20, 120)
-        };*/
 
         var fontStyle = new PropertyMap();
         fontStyle.Insert("family", new PropertyValue("SamsungOne"));
@@ -125,6 +123,7 @@ public static class UiHeroCarouselBuilder
 
         var buttonsRow = new View
         {
+            Name= "boton1",
             Layout = new LinearLayout
             {
                 LinearOrientation = LinearLayout.Orientation.Vertical,
@@ -133,8 +132,13 @@ public static class UiHeroCarouselBuilder
             ClippingMode = ClippingModeType.Disabled,
         };
 
-        buttonsRow.Add(CreatePrimaryButton("Ver ahora"));
-        buttonsRow.Add(CreateSecondaryButton("Más información"));
+        var primaryButton = CreatePrimaryButton("Ver ahora");
+        primaryButton.Name = "PrimaryButton   "+ section + title; //necesario para saber cual boton le pego
+        buttonsRow.Add(primaryButton);
+
+        var secondaryButton = CreateSecondaryButton("Más información");
+        secondaryButton.Name = "SecondaryButton " + section + title; //necesario para saber cual boton le pego
+        buttonsRow.Add(secondaryButton);
 
         // 🧱 Armado
         content.Add(titleImage);
@@ -143,10 +147,7 @@ public static class UiHeroCarouselBuilder
 
         card.Add(background);
         card.Add(overlay);
-        //card.Add(titleLabel);
-
         card.Add(content);
-
 
         return card;
     }
@@ -234,7 +235,24 @@ public static class UiHeroCarouselBuilder
 
         button.Add(label);
 
-        // 🔥 FOCO VISUAL REAL
+        button.KeyEvent += (s, e) =>
+        {
+            if (e.Key.State == Key.StateType.Down &&
+                e.Key.KeyPressedName == "Return")
+            {
+                var button = FocusManager.Instance.GetCurrentFocusView().Name.Substring(16);
+                var title = button.Substring(3);
+                switch (button.Substring(0, 3))
+                {
+                    case "nov":
+                        return true;
+                }
+
+                return true;
+            }
+            return false;
+        };
+
         button.FocusGained += (s, e) =>
         {
             button.BorderlineWidth = 3;
@@ -245,7 +263,7 @@ public static class UiHeroCarouselBuilder
         {
             button.BorderlineWidth = 0;
         };
-
+       
         return button;
     }
 
@@ -263,6 +281,61 @@ public static class UiHeroCarouselBuilder
             text,
             new Color(0.25f, 0.25f, 0.25f, 1f)
         );
+    }
+
+    //funcion para saber a que boton le estoy pegando
+    public static View GetPrimaryButtonAt(int index)
+    {
+        if (_contentView == null) return null;
+
+        if (index < 0 || index >= _contentView.Children.Count)
+            return null;
+
+        var card = _contentView.Children[index];
+
+        return FindPrimaryButton(card);
+    }
+
+    private static View FindPrimaryButton(View parent)
+    {
+        foreach (var child in parent.Children)
+        {
+            if (child.Name.Contains("PrimaryButton "))
+                return child;
+
+            var found = FindPrimaryButton(child);
+            if (found != null)
+                return found;
+        }
+
+        return null;
+    }
+
+    public static View GetSecondaryButtonAt(int index)
+    {
+        if (_contentView == null) return null;
+
+        if (index < 0 || index >= _contentView.Children.Count)
+            return null;
+
+        var card = _contentView.Children[index];
+
+        return FindSecondaryButton(card);
+    }
+
+    private static View FindSecondaryButton(View parent)
+    {
+        foreach (var child in parent.Children)
+        {
+            if (child.Name.Contains("SecondaryButton "))
+                return child;
+
+            var found = FindSecondaryButton(child);
+            if (found != null)
+                return found;
+        }
+
+        return null;
     }
 
 }
