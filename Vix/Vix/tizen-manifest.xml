@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns="http://tizen.org/ns/packages" api-version="9.0" package="org.tizen.example.Vix" version="1.0.0">
+<manifest xmlns="http://tizen.org/ns/packages" api-version="6.0" package="org.tizen.example.Vix" version="1.0.0">
   <profile name="common" />
   <ui-application appid="org.tizen.example.Vix"
 					exec="Vix.dll"
@@ -8,7 +8,7 @@
 					taskmanage="true"
 					nodisplay="false"
 					launch_mode="single"
-                    api-version="12">
+                    api-version="6">
     <label>Vix</label>
     <icon>Vix.png</icon>
     <metadata key="http://tizen.org/metadata/prefer_dotnet_aot" value="true" />

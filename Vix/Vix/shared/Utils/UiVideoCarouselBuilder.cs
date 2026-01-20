@@ -88,7 +88,7 @@ public static class UiVideoCarouselBuilder
         {
             Size = new NUISize(260, 140),
             Focusable = true,
-            CornerRadius = 8,
+            //CornerRadius = 8,
             BackgroundColor = Color.Black,
             Name = name
         };

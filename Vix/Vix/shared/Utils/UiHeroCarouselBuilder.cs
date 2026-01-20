@@ -79,7 +79,7 @@ public static class UiHeroCarouselBuilder
             ResourceUrl = imageUrl,
             Size = new Size(1920, 1100),
             FittingMode = FittingModeType.ScaleToFill,
-            SamplingMode = SamplingModeType.Box
+            //SamplingMode = SamplingModeType.Box
         };
 
         var overlay = new View
@@ -162,7 +162,7 @@ public static class UiHeroCarouselBuilder
             Layout = new LinearLayout
             {
                 LinearOrientation = LinearLayout.Orientation.Horizontal,
-                HorizontalAlignment = HorizontalAlignment.Center,
+                //HorizontalAlignment = HorizontalAlignment.Center,
                 CellPadding = new Size2D(14, 0)
             }
         };
@@ -173,7 +173,7 @@ public static class UiHeroCarouselBuilder
             {
                 Name = i.ToString(),
                 Size = new Size(20, 20),
-                CornerRadius = 10,
+                //CornerRadius = 10,
                 BackgroundColor = i == 0 ? Color.White : new Color(1, 1, 1, 0.4f)
             };
 
@@ -210,9 +210,9 @@ public static class UiHeroCarouselBuilder
         {
             Size = new Size(306, 84),
             BackgroundColor = backgroundColor,
-            CornerRadius = 8,
+           // CornerRadius = 8,
             Focusable = true,
-            BorderlineWidth = 0
+           // BorderlineWidth = 0
         };
 
         var fontStyle = new PropertyMap();
@@ -255,13 +255,13 @@ public static class UiHeroCarouselBuilder
 
         button.FocusGained += (s, e) =>
         {
-            button.BorderlineWidth = 3;
-            button.BorderlineColor = Color.White;
+           // button.BorderlineWidth = 3;
+          //  button.BorderlineColor = Color.White;
         };
 
         button.FocusLost += (s, e) =>
         {
-            button.BorderlineWidth = 0;
+           // button.BorderlineWidth = 0;
         };
        
         return button;

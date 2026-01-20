@@ -17,8 +17,8 @@ public static class UiDetailBuilder
             HeightSpecification = LayoutParamPolicies.MatchParent,
             Layout = new LinearLayout
             {
-                LinearOrientation = LinearLayout.Orientation.Vertical,
-                HorizontalAlignment = HorizontalAlignment.Center
+                LinearOrientation = LinearLayout.Orientation.Vertical
+              //  ,HorizontalAlignment = HorizontalAlignment.Center
             },
             Focusable = true
         };
@@ -51,11 +51,11 @@ public static class UiDetailBuilder
             HeightSpecification = 120,
             BackgroundColor = Color.White,
             TextColor = Color.Black,
-            CornerRadius = 10,
+            //CornerRadius = 10,
             Margin = new Extents(0, 0, 40, 40)
         };
 
-        backBtn.Clicked += (s, e) => CloseDetail();
+       // backBtn.Clicked += (s, e) => CloseDetail();
 
         detailView.Add(backBtn);
 
